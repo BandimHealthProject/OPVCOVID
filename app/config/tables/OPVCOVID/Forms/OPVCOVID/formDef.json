@@ -1,0 +1,1720 @@
+{
+  "xlsx": {
+    "settings": [
+      {
+        "setting_name": "form_id",
+        "value": "OPVCOVD",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_version",
+        "value": 60120,
+        "_row_num": 3
+      },
+      {
+        "setting_name": "table_id",
+        "value": "OPVCOVID",
+        "_row_num": 4
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": {
+            "text": {
+              "english": "OPVCOVID - Follow up",
+              "default": "OPVCOVID  - Seguimento"
+            }
+          }
+        },
+        "_row_num": 5
+      },
+      {
+        "setting_name": "default",
+        "display": {
+          "locale": {
+            "text": {
+              "english": "Portuguese",
+              "default": "Portugues"
+            }
+          }
+        },
+        "_row_num": 6
+      },
+      {
+        "setting_name": "english",
+        "display": {
+          "locale": {
+            "text": {
+              "english": "English",
+              "default": "Inglês"
+            }
+          }
+        },
+        "_row_num": 7
+      },
+      {
+        "setting_name": "font-size",
+        "value": "20pt",
+        "_row_num": 8
+      },
+      {
+        "setting_name": "instance_name",
+        "value": "NOMECRI",
+        "_row_num": 9
+      }
+    ],
+    "survey": [
+      {
+        "clause": "begin screen",
+        "_row_num": 2
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "regidc: <b>{{data.REGIDC}}</b>",
+              "default": "regidc: <b>{{data.REGIDC}}</b>"
+            }
+          }
+        },
+        "_row_num": 3
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "reg: <b>{{data.REG}}</b>",
+              "default": "reg: <b>{{data.REG}}</b>"
+            }
+          }
+        },
+        "_row_num": 4
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "tab: <b>{{data.TAB}}</b>",
+              "default": "tab: <b>{{data.TAB}}</b>"
+            }
+          }
+        },
+        "_row_num": 5
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "mor: <b>{{data.MOR}}</b>",
+              "default": "mor: <b>{{data.MOR}}</b>"
+            }
+          }
+        },
+        "_row_num": 6
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "noc: <b>{{data.NOC}}</b>",
+              "default": "noc: <b>{{data.NOC}}</b>"
+            }
+          }
+        },
+        "_row_num": 7
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "nomecri: <b>{{data.NOMECRI}}</b>",
+              "default": "nomecri: <b>{{data.NOMECRI}}</b>"
+            }
+          }
+        },
+        "_row_num": 8
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "regdia: <b>{{calculates.displayREGDIA}}</b>",
+              "default": "regdia: <b>{{calculates.displayREGDIA}}</b>"
+            }
+          }
+        },
+        "_row_num": 9
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "dnasc: <b>{{calculates.displayDNASC}}</b>",
+              "default": "dnasc: <b>{{calculates.displayDNASC}}</b>"
+            }
+          }
+        },
+        "_row_num": 10
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "nomemae: <b>{{data.NOMEMAE}}</b>",
+              "default": "nomemae: <b>{{data.NOMEMAE}}</b>"
+            }
+          }
+        },
+        "_row_num": 11
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "datex: <b>{{calculates.displayDATEX}}</b>",
+              "default": "datex: <b>{{calculates.displayDATEX}}</b>"
+            }
+          }
+        },
+        "_row_num": 12
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 13
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 14
+      },
+      {
+        "type": "select_one",
+        "values_list": "YesNo",
+        "name": "INF",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Is the informant the participant ({{data.NOME}})"
+            }
+          }
+        },
+        "_row_num": 15
+      },
+      {
+        "clause": "if",
+        "condition": "data(\"PARTICIPANTE\") == \"2\"",
+        "_row_num": 16
+      },
+      {
+        "type": "select_one_with_other",
+        "values_list": "Relation",
+        "name": "INFOU",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "How is the informant related to the participant?"
+            }
+          }
+        },
+        "_row_num": 17
+      },
+      {
+        "clause": "end if",
+        "_row_num": 18
+      },
+      {
+        "type": "adate",
+        "name": "DATASEG",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Date (HUSK AUTO DATE)"
+            }
+          },
+          "adate": {
+            "helperText": false
+          }
+        },
+        "_row_num": 19
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 20
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 21
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "test"
+            }
+          }
+        },
+        "_row_num": 22
+      },
+      {
+        "type": "select_one",
+        "values_list": "YesNoDontknow",
+        "name": "CONSTIPACAOHOJE",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Today?"
+            }
+          }
+        },
+        "_row_num": 23
+      },
+      {
+        "type": "select_one",
+        "values_list": "YesNoDontknow",
+        "name": "CONSTIPACAOSEMANA",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Last 4 weeks?"
+            }
+          }
+        },
+        "_row_num": 24
+      },
+      {
+        "clause": "if",
+        "condition": "data(\"CONSTIPACAOSEMANA\") == \"1\"",
+        "_row_num": 25
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "Week",
+        "name": "CONSTIPACAOSEMANAQUAL",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Which week(s)?"
+            }
+          }
+        },
+        "_row_num": 26
+      },
+      {
+        "clause": "end if",
+        "_row_num": 27
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 28
+      }
+    ],
+    "choices": [
+      {
+        "choice_list_name": "YesNo",
+        "data_value": "1",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Yes",
+              "default": "Sim"
+            }
+          }
+        },
+        "_row_num": 2
+      },
+      {
+        "choice_list_name": "YesNo",
+        "data_value": "2",
+        "display": {
+          "title": {
+            "text": {
+              "english": "No",
+              "default": "Não"
+            }
+          }
+        },
+        "_row_num": 3
+      },
+      {
+        "choice_list_name": "Relation",
+        "data_value": "1",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Mother/father"
+            }
+          }
+        },
+        "_row_num": 4
+      },
+      {
+        "choice_list_name": "Relation",
+        "data_value": "2",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Sister/brother"
+            }
+          }
+        },
+        "_row_num": 5
+      },
+      {
+        "choice_list_name": "Relation",
+        "data_value": "3",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Wife/husband"
+            }
+          }
+        },
+        "_row_num": 6
+      },
+      {
+        "choice_list_name": "Relation",
+        "data_value": "4",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Co-wife"
+            }
+          }
+        },
+        "_row_num": 7
+      },
+      {
+        "choice_list_name": "YesNoDontknow",
+        "data_value": "1",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Yes",
+              "default": "Sim"
+            }
+          }
+        },
+        "_row_num": 10
+      },
+      {
+        "choice_list_name": "YesNoDontknow",
+        "data_value": "2",
+        "display": {
+          "title": {
+            "text": {
+              "english": "No",
+              "default": "Não"
+            }
+          }
+        },
+        "_row_num": 11
+      },
+      {
+        "choice_list_name": "YesNoDontknow",
+        "data_value": "3",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Don't know",
+              "default": "Não sabe"
+            }
+          }
+        },
+        "_row_num": 12
+      },
+      {
+        "choice_list_name": "Week",
+        "data_value": "1",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Week 1"
+            }
+          }
+        },
+        "_row_num": 13
+      },
+      {
+        "choice_list_name": "Week",
+        "data_value": "2",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Week 2"
+            }
+          }
+        },
+        "_row_num": 14
+      },
+      {
+        "choice_list_name": "Week",
+        "data_value": "3",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Week 3"
+            }
+          }
+        },
+        "_row_num": 15
+      },
+      {
+        "choice_list_name": "Week",
+        "data_value": "4",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Week 4"
+            }
+          }
+        },
+        "_row_num": 16
+      },
+      {
+        "choice_list_name": "dontknowdate",
+        "data_value": "D:NS,M:NS,Y:NS",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Don't know the date",
+              "default": "Não sabe a data"
+            }
+          }
+        },
+        "_row_num": 19
+      }
+    ],
+    "calculates": [
+      {
+        "calculation_name": "displayREGDIA",
+        "calculation": "adate.display(data('REGDIA'))",
+        "_row_num": 2
+      },
+      {
+        "calculation_name": "displayDNASC",
+        "calculation": "adate.display(data('DNASC'))",
+        "_row_num": 3
+      },
+      {
+        "calculation_name": "displayDATEX",
+        "calculation": "adate.display(data('DATEX'))",
+        "_row_num": 4
+      }
+    ],
+    "prompt_types": [
+      {
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "_row_num": 2
+      }
+    ]
+  },
+  "specification": {
+    "column_types": {
+      "_screen_block": "function",
+      "condition": "formula",
+      "constraint": "formula",
+      "required": "formula",
+      "calculation": "formula",
+      "newRowInitialElementKeyToValueMap": "formula",
+      "openRowInitialElementKeyToValueMap": "formula",
+      "selectionArgs": "formula",
+      "url": "formula",
+      "uri": "formula",
+      "callback": "formula(context)",
+      "choice_filter": "formula(choice_item)",
+      "templatePath": "requirejs_path"
+    },
+    "settings": {
+      "form_id": {
+        "setting_name": "form_id",
+        "value": "OPVCOVD",
+        "_row_num": 2
+      },
+      "form_version": {
+        "setting_name": "form_version",
+        "value": 60120,
+        "_row_num": 3
+      },
+      "table_id": {
+        "setting_name": "table_id",
+        "value": "OPVCOVID",
+        "_row_num": 4
+      },
+      "survey": {
+        "setting_name": "survey",
+        "display": {
+          "title": {
+            "text": {
+              "english": "OPVCOVID - Follow up",
+              "default": "OPVCOVID  - Seguimento"
+            }
+          }
+        },
+        "_row_num": 5
+      },
+      "default": {
+        "setting_name": "default",
+        "display": {
+          "locale": {
+            "text": {
+              "english": "Portuguese",
+              "default": "Portugues"
+            }
+          }
+        },
+        "_row_num": 6
+      },
+      "english": {
+        "setting_name": "english",
+        "display": {
+          "locale": {
+            "text": {
+              "english": "English",
+              "default": "Inglês"
+            }
+          }
+        },
+        "_row_num": 7
+      },
+      "font-size": {
+        "setting_name": "font-size",
+        "value": "20pt",
+        "_row_num": 8
+      },
+      "instance_name": {
+        "setting_name": "instance_name",
+        "value": "NOMECRI",
+        "_row_num": 9
+      },
+      "_locales": {
+        "setting_name": "_locales",
+        "_row_num": 5,
+        "value": [
+          {
+            "display": {
+              "locale": {
+                "text": {
+                  "english": "Portuguese",
+                  "default": "Portugues"
+                }
+              }
+            },
+            "_row_num": 6,
+            "name": "default"
+          },
+          {
+            "display": {
+              "locale": {
+                "text": {
+                  "english": "English",
+                  "default": "Inglês"
+                }
+              }
+            },
+            "_row_num": 7,
+            "name": "english"
+          }
+        ]
+      },
+      "_default_locale": {
+        "setting_name": "_default_locale",
+        "_row_num": 5,
+        "value": "default"
+      },
+      "initial": {
+        "setting_name": "survey",
+        "display": {
+          "title": {
+            "text": {
+              "english": "OPVCOVID - Follow up",
+              "default": "OPVCOVID  - Seguimento"
+            }
+          }
+        },
+        "_row_num": 5
+      }
+    },
+    "choices": {
+      "YesNo": [
+        {
+          "choice_list_name": "YesNo",
+          "data_value": "1",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Yes",
+                "default": "Sim"
+              }
+            }
+          },
+          "_row_num": 2
+        },
+        {
+          "choice_list_name": "YesNo",
+          "data_value": "2",
+          "display": {
+            "title": {
+              "text": {
+                "english": "No",
+                "default": "Não"
+              }
+            }
+          },
+          "_row_num": 3
+        }
+      ],
+      "Relation": [
+        {
+          "choice_list_name": "Relation",
+          "data_value": "1",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Mother/father"
+              }
+            }
+          },
+          "_row_num": 4
+        },
+        {
+          "choice_list_name": "Relation",
+          "data_value": "2",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Sister/brother"
+              }
+            }
+          },
+          "_row_num": 5
+        },
+        {
+          "choice_list_name": "Relation",
+          "data_value": "3",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Wife/husband"
+              }
+            }
+          },
+          "_row_num": 6
+        },
+        {
+          "choice_list_name": "Relation",
+          "data_value": "4",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Co-wife"
+              }
+            }
+          },
+          "_row_num": 7
+        }
+      ],
+      "YesNoDontknow": [
+        {
+          "choice_list_name": "YesNoDontknow",
+          "data_value": "1",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Yes",
+                "default": "Sim"
+              }
+            }
+          },
+          "_row_num": 10
+        },
+        {
+          "choice_list_name": "YesNoDontknow",
+          "data_value": "2",
+          "display": {
+            "title": {
+              "text": {
+                "english": "No",
+                "default": "Não"
+              }
+            }
+          },
+          "_row_num": 11
+        },
+        {
+          "choice_list_name": "YesNoDontknow",
+          "data_value": "3",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Don't know",
+                "default": "Não sabe"
+              }
+            }
+          },
+          "_row_num": 12
+        }
+      ],
+      "Week": [
+        {
+          "choice_list_name": "Week",
+          "data_value": "1",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Week 1"
+              }
+            }
+          },
+          "_row_num": 13
+        },
+        {
+          "choice_list_name": "Week",
+          "data_value": "2",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Week 2"
+              }
+            }
+          },
+          "_row_num": 14
+        },
+        {
+          "choice_list_name": "Week",
+          "data_value": "3",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Week 3"
+              }
+            }
+          },
+          "_row_num": 15
+        },
+        {
+          "choice_list_name": "Week",
+          "data_value": "4",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Week 4"
+              }
+            }
+          },
+          "_row_num": 16
+        }
+      ],
+      "dontknowdate": [
+        {
+          "choice_list_name": "dontknowdate",
+          "data_value": "D:NS,M:NS,Y:NS",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Don't know the date",
+                "default": "Não sabe a data"
+              }
+            }
+          },
+          "_row_num": 19
+        }
+      ]
+    },
+    "queries": {},
+    "calculates": {
+      "displayREGDIA": {
+        "calculation_name": "displayREGDIA",
+        "calculation": "adate.display(data('REGDIA'))",
+        "_row_num": 2
+      },
+      "displayDNASC": {
+        "calculation_name": "displayDNASC",
+        "calculation": "adate.display(data('DNASC'))",
+        "_row_num": 3
+      },
+      "displayDATEX": {
+        "calculation_name": "displayDATEX",
+        "calculation": "adate.display(data('DATEX'))",
+        "_row_num": 4
+      }
+    },
+    "model": {
+      "INF": {
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "YesNo",
+        "elementKey": "INF"
+      },
+      "INFOU": {
+        "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "Relation",
+        "elementKey": "INFOU"
+      },
+      "DATASEG": {
+        "_defn": [
+          {
+            "_row_num": 19,
+            "section_name": "survey"
+          }
+        ],
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "elementKey": "DATASEG"
+      },
+      "CONSTIPACAOHOJE": {
+        "_defn": [
+          {
+            "_row_num": 23,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "YesNoDontknow",
+        "elementKey": "CONSTIPACAOHOJE"
+      },
+      "CONSTIPACAOSEMANA": {
+        "_defn": [
+          {
+            "_row_num": 24,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "YesNoDontknow",
+        "elementKey": "CONSTIPACAOSEMANA"
+      },
+      "CONSTIPACAOSEMANAQUAL": {
+        "_defn": [
+          {
+            "_row_num": 26,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "CONSTIPACAOSEMANAQUAL_items"
+        },
+        "valuesList": "Week",
+        "elementKey": "CONSTIPACAOSEMANAQUAL"
+      }
+    },
+    "section_names": [
+      "initial",
+      "survey"
+    ],
+    "sections": {
+      "survey": {
+        "section_name": "survey",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "regidc: <b>{{data.REGIDC}}</b>",
+                  "default": "regidc: <b>{{data.REGIDC}}</b>"
+                }
+              }
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "reg: <b>{{data.REG}}</b>",
+                  "default": "reg: <b>{{data.REG}}</b>"
+                }
+              }
+            },
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "tab: <b>{{data.TAB}}</b>",
+                  "default": "tab: <b>{{data.TAB}}</b>"
+                }
+              }
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "mor: <b>{{data.MOR}}</b>",
+                  "default": "mor: <b>{{data.MOR}}</b>"
+                }
+              }
+            },
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "noc: <b>{{data.NOC}}</b>",
+                  "default": "noc: <b>{{data.NOC}}</b>"
+                }
+              }
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 4
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "nomecri: <b>{{data.NOMECRI}}</b>",
+                  "default": "nomecri: <b>{{data.NOMECRI}}</b>"
+                }
+              }
+            },
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 5
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "regdia: <b>{{calculates.displayREGDIA}}</b>",
+                  "default": "regdia: <b>{{calculates.displayREGDIA}}</b>"
+                }
+              }
+            },
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 6
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "dnasc: <b>{{calculates.displayDNASC}}</b>",
+                  "default": "dnasc: <b>{{calculates.displayDNASC}}</b>"
+                }
+              }
+            },
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 7
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "nomemae: <b>{{data.NOMEMAE}}</b>",
+                  "default": "nomemae: <b>{{data.NOMEMAE}}</b>"
+                }
+              }
+            },
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 8
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "datex: <b>{{calculates.displayDATEX}}</b>",
+                  "default": "datex: <b>{{calculates.displayDATEX}}</b>"
+                }
+              }
+            },
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 9
+          },
+          {
+            "type": "select_one",
+            "values_list": "YesNo",
+            "name": "INF",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Is the informant the participant ({{data.NOME}})"
+                }
+              }
+            },
+            "_row_num": 15,
+            "__rowNum__": 14,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen14",
+            "promptIdx": 10
+          },
+          {
+            "type": "select_one_with_other",
+            "values_list": "Relation",
+            "name": "INFOU",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "How is the informant related to the participant?"
+                }
+              }
+            },
+            "_row_num": 17,
+            "__rowNum__": 16,
+            "_token_type": "prompt",
+            "_type": "select_one_with_other",
+            "_branch_label_enclosing_screen": "survey/_screen14",
+            "promptIdx": 11
+          },
+          {
+            "type": "adate",
+            "name": "DATASEG",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Date (HUSK AUTO DATE)"
+                }
+              },
+              "adate": {
+                "helperText": false
+              }
+            },
+            "_row_num": 19,
+            "__rowNum__": 18,
+            "_token_type": "prompt",
+            "_type": "adate",
+            "_branch_label_enclosing_screen": "survey/_screen14",
+            "promptIdx": 12
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "test"
+                }
+              }
+            },
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen21",
+            "promptIdx": 13
+          },
+          {
+            "type": "select_one",
+            "values_list": "YesNoDontknow",
+            "name": "CONSTIPACAOHOJE",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Today?"
+                }
+              }
+            },
+            "_row_num": 23,
+            "__rowNum__": 22,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen21",
+            "promptIdx": 14
+          },
+          {
+            "type": "select_one",
+            "values_list": "YesNoDontknow",
+            "name": "CONSTIPACAOSEMANA",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Last 4 weeks?"
+                }
+              }
+            },
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen21",
+            "promptIdx": 15
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "Week",
+            "name": "CONSTIPACAOSEMANAQUAL",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Which week(s)?"
+                }
+              }
+            },
+            "_row_num": 26,
+            "__rowNum__": 25,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen21",
+            "promptIdx": 16
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 29,
+            "_branch_label_enclosing_screen": "survey/_screen29",
+            "promptIdx": 17
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 13,
+              "__rowNum__": 12,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 20,
+              "__rowNum__": 19,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\nif (data(\"PARTICIPANTE\") == \"2\") {\nactivePromptIndicies.push(11);\n}\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 1
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 28,
+              "__rowNum__": 27,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nif (data(\"CONSTIPACAOSEMANA\") == \"1\") {\nactivePromptIndicies.push(16);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 2
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 29,
+            "operationIdx": 3
+          },
+          {
+            "_row_num": 29,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(17);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 4
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 29,
+            "operationIdx": 5
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_screen14": 1,
+          "_screen21": 2,
+          "_contents": 4,
+          "_screen29": 4
+        }
+      },
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true
+        },
+        "prompts": [
+          {
+            "_row_num": 3,
+            "type": "opening",
+            "display": {
+              "text": "Edit form"
+            },
+            "_token_type": "prompt",
+            "_type": "opening",
+            "_branch_label_enclosing_screen": "initial/_screen3",
+            "promptIdx": 0
+          },
+          {
+            "_row_num": 4,
+            "clause": "do section survey",
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 1,
+            "display": {
+              "title": {
+                "text": {
+                  "english": "OPVCOVID - Follow up",
+                  "default": "OPVCOVID  - Seguimento"
+                }
+              }
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "_row_num": 5,
+            "type": "finalize",
+            "display": {
+              "text": "Save form"
+            },
+            "_token_type": "prompt",
+            "_type": "finalize",
+            "_branch_label_enclosing_screen": "initial/_screen5",
+            "promptIdx": 2
+          },
+          {
+            "_row_num": 7,
+            "type": "instances",
+            "display": {
+              "text": "Saved instances"
+            },
+            "_token_type": "prompt",
+            "_type": "instances",
+            "_branch_label_enclosing_screen": "initial/_screen7",
+            "promptIdx": 3
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 9,
+            "_branch_label_enclosing_screen": "initial/_screen9",
+            "promptIdx": 4
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "_row_num": 2,
+            "clause": "if // start",
+            "condition": "(opendatakit.getCurrentInstanceId() != null)",
+            "_token_type": "goto_label",
+            "_tag_name": "start",
+            "_branch_label": "_then2",
+            "operationIdx": 0
+          },
+          {
+            "clause": "else // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_else6",
+            "_row_num": 6,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 3,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 4,
+            "clause": "do section survey",
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 3
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 4
+          },
+          {
+            "clause": "end if // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif8",
+            "_row_num": 8,
+            "operationIdx": 5
+          },
+          {
+            "_row_num": 7,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 6
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 9,
+            "operationIdx": 7
+          },
+          {
+            "_row_num": 9,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 8
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 9
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 10
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 11
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 12
+          }
+        ],
+        "branch_label_map": {
+          "_then2": 2,
+          "_screen3": 2,
+          "_screen5": 4,
+          "_else6": 6,
+          "_screen7": 6,
+          "_endif8": 7,
+          "_contents": 8,
+          "_screen9": 8,
+          "_finalize": 10
+        }
+      }
+    },
+    "dataTableModel": {
+      "INF": {
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "YesNo",
+        "elementKey": "INF",
+        "elementName": "INF",
+        "elementSet": "data",
+        "elementPath": "INF"
+      },
+      "INFOU": {
+        "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "Relation",
+        "elementKey": "INFOU",
+        "elementName": "INFOU",
+        "elementSet": "data",
+        "elementPath": "INFOU"
+      },
+      "DATASEG": {
+        "_defn": [
+          {
+            "_row_num": 19,
+            "section_name": "survey"
+          }
+        ],
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "elementKey": "DATASEG",
+        "elementName": "DATASEG",
+        "elementSet": "data",
+        "elementPath": "DATASEG"
+      },
+      "CONSTIPACAOHOJE": {
+        "_defn": [
+          {
+            "_row_num": 23,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "YesNoDontknow",
+        "elementKey": "CONSTIPACAOHOJE",
+        "elementName": "CONSTIPACAOHOJE",
+        "elementSet": "data",
+        "elementPath": "CONSTIPACAOHOJE"
+      },
+      "CONSTIPACAOSEMANA": {
+        "_defn": [
+          {
+            "_row_num": 24,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "YesNoDontknow",
+        "elementKey": "CONSTIPACAOSEMANA",
+        "elementName": "CONSTIPACAOSEMANA",
+        "elementSet": "data",
+        "elementPath": "CONSTIPACAOSEMANA"
+      },
+      "CONSTIPACAOSEMANAQUAL": {
+        "_defn": [
+          {
+            "_row_num": 26,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "CONSTIPACAOSEMANAQUAL_items",
+          "elementName": "items",
+          "elementSet": "data",
+          "elementPath": "CONSTIPACAOSEMANAQUAL.items",
+          "notUnitOfRetention": true
+        },
+        "valuesList": "Week",
+        "elementKey": "CONSTIPACAOSEMANAQUAL",
+        "elementName": "CONSTIPACAOSEMANAQUAL",
+        "elementSet": "data",
+        "elementPath": "CONSTIPACAOSEMANAQUAL",
+        "listChildElementKeys": [
+          "CONSTIPACAOSEMANAQUAL_items"
+        ]
+      },
+      "CONSTIPACAOSEMANAQUAL_items": {
+        "type": "string",
+        "elementKey": "CONSTIPACAOSEMANAQUAL_items",
+        "elementName": "items",
+        "elementSet": "data",
+        "elementPath": "CONSTIPACAOSEMANAQUAL.items",
+        "notUnitOfRetention": true
+      },
+      "_id": {
+        "type": "string",
+        "isNotNullable": true,
+        "elementKey": "_id",
+        "elementName": "_id",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_id"
+      },
+      "_row_etag": {
+        "type": "string",
+        "isNotNullable": false,
+        "elementKey": "_row_etag",
+        "elementName": "_row_etag",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_row_etag"
+      },
+      "_sync_state": {
+        "type": "string",
+        "isNotNullable": true,
+        "elementKey": "_sync_state",
+        "elementName": "_sync_state",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_sync_state"
+      },
+      "_conflict_type": {
+        "type": "integer",
+        "isNotNullable": false,
+        "elementKey": "_conflict_type",
+        "elementName": "_conflict_type",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_conflict_type"
+      },
+      "_default_access": {
+        "type": "string",
+        "isNotNullable": false,
+        "elementKey": "_default_access",
+        "elementName": "_default_access",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_default_access"
+      },
+      "_form_id": {
+        "type": "string",
+        "isNotNullable": false,
+        "elementKey": "_form_id",
+        "elementName": "_form_id",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_form_id"
+      },
+      "_group_modify": {
+        "type": "string",
+        "isNotNullable": false,
+        "elementKey": "_group_modify",
+        "elementName": "_group_modify",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_group_modify"
+      },
+      "_group_privileged": {
+        "type": "string",
+        "isNotNullable": false,
+        "elementKey": "_group_privileged",
+        "elementName": "_group_privileged",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_group_privileged"
+      },
+      "_group_read_only": {
+        "type": "string",
+        "isNotNullable": false,
+        "elementKey": "_group_read_only",
+        "elementName": "_group_read_only",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_group_read_only"
+      },
+      "_locale": {
+        "type": "string",
+        "isNotNullable": false,
+        "elementKey": "_locale",
+        "elementName": "_locale",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_locale"
+      },
+      "_row_owner": {
+        "type": "string",
+        "isNotNullable": false,
+        "elementKey": "_row_owner",
+        "elementName": "_row_owner",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_row_owner"
+      },
+      "_savepoint_type": {
+        "type": "string",
+        "isNotNullable": false,
+        "elementKey": "_savepoint_type",
+        "elementName": "_savepoint_type",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_savepoint_type"
+      },
+      "_savepoint_timestamp": {
+        "type": "string",
+        "isNotNullable": true,
+        "elementKey": "_savepoint_timestamp",
+        "elementName": "_savepoint_timestamp",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_savepoint_timestamp"
+      },
+      "_savepoint_creator": {
+        "type": "string",
+        "isNotNullable": false,
+        "elementKey": "_savepoint_creator",
+        "elementName": "_savepoint_creator",
+        "elementSet": "instanceMetadata",
+        "elementPath": "_savepoint_creator"
+      }
+    }
+  }
+}
