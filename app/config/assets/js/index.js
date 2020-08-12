@@ -2,10 +2,14 @@
  * Responsible for rendering the select region screen 
  */
 'use strict';
-var children;
+var participants, selDay, selMon, selYea, date;
 function display() {
+    selDay = $('#selDateDay');
+    selMon = $('#selDateMonth');
+    selYea = $('#selDateYear');
+    
     doSanityCheck();
-    getList()
+    getList();
 }
 
 
@@ -16,116 +20,157 @@ function doSanityCheck() {
 
 function getList() {
     // SQL to get children
-    var sql = "SELECT _savepoint_type, REG FROM ParmaComsup";
-    children = [];
-    console.log("Querying database for children...");
+    var sql = "SELECT _savepoint_type, BAIRRO, COVID, DATINC, DATSEG, FU, LASTINTERVIEW, POID " + 
+        " FROM OPVCOVID " +
+        " GROUP BY POID HAVING MAX(FU)"; 
+    participants = [];
+    console.log("Querying database for participants...");
     console.log(sql);
     var successFn = function( result ) {
-        console.log("Found " + result.getCount() + " children");
+        console.log("Found " + result.getCount() + " participants");
         for (var row = 0; row < result.getCount(); row++) {
-            var savepoint = result.getData(row,"_savepoint_type")
-            var REG = result.getData(row,"REG");
+            var savepoint = result.getData(row,"_savepoint_type");
+            var BAIRRO = result.getData(row,"BAIRRO");
+            var COVID = result.getData(row,"COVID");
+            var DATINC = result.getData(row,"DATINC");
+            var DATSEG = result.getData(row,"DATSEG");
+            var FU = result.getData(row,"FU");
+            var LASTINTERVIEW = result.getData(row,"LASTINTERVIEW");
+            var POID = result.getData(row,"POID");
 
-            var p = { type: 'child', savepoint, REG};
-            children.push(p);
+            // generate follow-up date (28 days after last interview with succes follow up)
+            if (FU == 1 & COVID == null) {
+                var incD = Number(DATINC.slice(2, DATINC.search("M")-1));
+                var incM = DATINC.slice(DATINC.search("M")+2, DATINC.search("Y")-1);
+                var incY = DATINC.slice(DATINC.search("Y")+2);
+                var FUDate = new Date(incY, incM-1, incD + 28);
+            } else if (COVID == null) {
+                var segD = Number(DATSEG.slice(2, DATSEG.search("M")-1));
+                var segM = DATSEG.slice(DATSEG.search("M")+2, DATSEG.search("Y")-1);
+                var segY = DATSEG.slice(DATSEG.search("Y")+2);
+                var FUDate = new Date(segY, segM-1, segD);
+            } else {
+                var segD = Number(DATSEG.slice(2, DATSEG.search("M")-1));
+                var segM = DATSEG.slice(DATSEG.search("M")+2, DATSEG.search("Y")-1);
+                var segY = DATSEG.slice(DATSEG.search("Y")+2);
+                var FUDate = new Date(segY, segM-1, segD + 28);
+            }   
+            var p = { type: 'person', savepoint, BAIRRO, COVID, DATINC, DATSEG, FU, FUDate, LASTINTERVIEW, POID};
+            participants.push(p);
         }
-        console.log("Children:", children)
-        initButtons();
+        console.log("Participants:", participants)
+        initDate();
         return;
     }
     var failureFn = function( errorMsg ) {
-        console.error('Failed to get children from database: ' + errorMsg);
+        console.error('Failed to get participants from database: ' + errorMsg);
         console.error('Trying to execute the following SQL:');
         console.error(sql);
         alert("Program error Unable to look up persons.");
     }
-    odkData.arbitraryQuery('ParmaComsup', sql, null, null, null, successFn, failureFn);
+    odkData.arbitraryQuery('OPVCOVID', sql, null, null, null, successFn, failureFn);
+}
+
+function initDate() {
+    // Date dropdown
+    // Set default date
+    var today = new Date();
+    var defaultDay = today.getDate();
+    var defaultMon = today.getMonth()+1;
+    var defaultYea = today.getFullYear();
+
+    // List of date, months, years
+    var days = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+    var months = [1,2,3,4,5,6,7,8,9,10,11,12];
+    var years = [defaultYea-1, defaultYea, defaultYea+1];
+
+    $.each(days, function() {
+        if (this == defaultDay) {
+            selDay.append($("<option />").val(this).text(this).attr("selected",true));
+        } else {
+            selDay.append($("<option />").val(this).text(this));
+        }
+    })
+
+    $.each(months, function() {
+        if (this == defaultMon) {
+            selMon.append($("<option />").val(this).text(this).attr("selected",true));
+        } else {
+            selMon.append($("<option />").val(this).text(this));
+        }
+    })
+
+    $.each(years, function() {
+        if (this == defaultYea) {
+            selYea.append($("<option />").val(this).text(this).attr("selected",true));
+        } else {
+            selYea.append($("<option />").val(this).text(this));
+        }
+    })
+    document.getElementById("selDateDay").onchange = function() {initButtons()};
+    document.getElementById("selDateMonth").onchange = function() {initButtons()};
+    document.getElementById("selDateYear").onchange = function() {initButtons()};
+    initButtons();
 }
 
 function initButtons() {
-    // Region buttons
+    // Bairro buttons
     var btn01 = $('#btn01');
-    btn01.append(" <br />" + getCount(1));
+    btn01.html("Bandim II <br />" + getCount(1));
     btn01.on("click", function() {
-        var region = 1;
-        var queryParams = util.setQuerystringParams(region);
-        odkTables.launchHTML(null, 'config/assets/tabancaList.html' + queryParams);
+        var bairro = 1;
+        var date = new Date(selYea.val(), selMon.val()-1, selDay.val());
+        var queryParams = util.setQuerystringParams(bairro, null, null, null, date);
+        odkTables.launchHTML(null, 'config/assets/tabzList.html' + queryParams);
     });
     var btn02 = $('#btn02');
-    btn02.append(" <br />" + getCount(2));
+    btn02.html("Bandim II <br />" + getCount(2));
     btn02.on("click", function() {
-        var region = 2;
-        var queryParams = util.setQuerystringParams(region);
-        odkTables.launchHTML(null, 'config/assets/tabancaList.html' + queryParams);
+        var bairro = 2;
+        var date = new Date(selYea.val(), selMon.val()-1, selDay.val());
+        var queryParams = util.setQuerystringParams(bairro, null, null, null, date);
+        odkTables.launchHTML(null, 'config/assets/tabzList.html' + queryParams);
     });
     var btn03 = $('#btn03');
-    btn03.append(" <br />" + getCount(5));
+    btn03.html("Belem <br />" + getCount(3));
     btn03.on("click", function() {
-        var region = 5;
-        var queryParams = util.setQuerystringParams(region);
-        odkTables.launchHTML(null, 'config/assets/tabancaList.html' + queryParams);
+        var bairro = 3;
+        var date = new Date(selYea.val(), selMon.val()-1, selDay.val());
+        var queryParams = util.setQuerystringParams(bairro, null, null, null, date);
+        odkTables.launchHTML(null, 'config/assets/tabzList.html' + queryParams);
     });
     var btn04 = $('#btn04');
-    btn04.append(" <br />" + getCount(7));
+    btn04.html("Mindara <br />" + getCount(4));
     btn04.on("click", function() {
-        var region = 7;
-        var queryParams = util.setQuerystringParams(region);
-        odkTables.launchHTML(null, 'config/assets/tabancaList.html' + queryParams);
+        var bairro = 4;
+        var date = new Date(selYea.val(), selMon.val()-1, selDay.val());
+        var queryParams = util.setQuerystringParams(bairro, null, null, null, date);
+        odkTables.launchHTML(null, 'config/assets/tabzList.html' + queryParams);
     });
     var btn05 = $('#btn05');
-    btn05.append(" <br />" + getCount(8));
+    btn05.html("Cuntum I <br />" + getCount(7));
     btn05.on("click", function() {
-        var region = 8;
-        var queryParams = util.setQuerystringParams(region);
-        odkTables.launchHTML(null, 'config/assets/tabancaList.html' + queryParams);
+        var bairro = 7;
+        var date = new Date(selYea.val(), selMon.val()-1, selDay.val());
+        var queryParams = util.setQuerystringParams(bairro, null, null, null, date);
+        odkTables.launchHTML(null, 'config/assets/tabzList.html' + queryParams);
     });
     var btn06 = $('#btn06');
-    btn06.append(" <br />" + getCount(11));
+    btn06.html("Cuntum II <br />" + getCount(9));
     btn06.on("click", function() {
-        var region = 11;
-        var queryParams = util.setQuerystringParams(region);
-        odkTables.launchHTML(null, 'config/assets/tabancaList.html' + queryParams);
-    });
-    var btn07 = $('#btn07');
-    btn07.append(" <br />" + getCount(12));
-    btn07.on("click", function() {
-        var region = 12;
-        var queryParams = util.setQuerystringParams(region);
-        odkTables.launchHTML(null, 'config/assets/tabancaList.html' + queryParams);
-    });
-    var btn08 = $('#btn08');
-    btn08.append(" <br />" + getCount(13));
-    btn08.on("click", function() {
-        var region = 13;
-        var queryParams = util.setQuerystringParams(region);
-        odkTables.launchHTML(null, 'config/assets/tabancaList.html' + queryParams);
-    });
-    var btn09 = $('#btn09');
-    btn09.append(" <br />" + getCount(14));
-    btn09.on("click", function() {
-        var region = 14;
-        var queryParams = util.setQuerystringParams(region);
-        odkTables.launchHTML(null, 'config/assets/tabancaList.html' + queryParams);
-    });
-    var btn10 = $('#btn10');
-    btn10.append(" <br />" + getCount(15));
-    btn10.on("click", function() {
-        var region = 15;
-        var queryParams = util.setQuerystringParams(region);
-        odkTables.launchHTML(null, 'config/assets/tabancaList.html' + queryParams);
-    });
-    var btn11 = $('#btn11');
-    btn11.append(" <br />" + getCount(16));
-    btn11.on("click", function() {
-        var region = 16;
-        var queryParams = util.setQuerystringParams(region);
-        odkTables.launchHTML(null, 'config/assets/tabancaList.html' + queryParams);
+        var bairro = 9;
+        var date = new Date(selYea.val(), selMon.val()-1, selDay.val());
+        var queryParams = util.setQuerystringParams(bairro, null, null, null, date);
+        odkTables.launchHTML(null, 'config/assets/tabzList.html' + queryParams);
     });
 }
 
-function getCount(reg) {
-    var total = children.filter(child => child.REG == reg).length;
-    var checked = children.filter(x => x.savepoint=="COMPLETE" && x.REG == reg).length;
+function getCount(bairro) {
+    var today = new Date(selYea.val(), selMon.val()-1, selDay.val());
+    var todayAdate = "D:" + today.getDate() + ",M:" + (Number(today.getMonth()) + 1) + ",Y:" + today.getFullYear();
+
+    var total = participants.filter(person => person.BAIRRO == bairro & (person.FUDate <= today | person.DATSEG == todayAdate)).length;
+    var checked = participants.filter(person => person.BAIRRO == bairro & person.DATSEG == todayAdate).length;
     var count = "(" + checked + "/" + total + ")";
     return count;
 }
