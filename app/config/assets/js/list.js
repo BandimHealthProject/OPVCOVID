@@ -23,7 +23,7 @@ function display() {
 
 function loadPersons() {
     // SQL to get persons
-    var varNames = "_id, BAIRRO, CAMO, COVID, DATINC, DATSEG, DOB, FU, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC";
+    var varNames = "_id, BAIRRO, CALLBACK, CAMO, COVID, DATINC, DATSEG, DOB, ESTADO, FU, GETRESULTS, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC, TESTERESUL";
     var sql = "SELECT " + varNames +
         " FROM OPVCOVID" + 
         " WHERE BAIRRO = " + bairro + " AND TABZ = " + tabz + 
@@ -38,12 +38,15 @@ function loadPersons() {
             var rowId = result.getData(row,"_id"); // row ID 
 
             var BAIRRO = result.getData(row,"BAIRRO");
+            var CALLBACK = result.getData(row,"CALLBACK");
             var CAMO = result.getData(row,"CAMO");
             var COVID = result.getData(row,"COVID");
             var DATINC = result.getData(row,"DATINC");
             var DATSEG = result.getData(row,"DATSEG");
             var DOB = result.getData(row,"DOB");
+            var ESTADO = result.getData(row,"ESTADO");
             var FU = result.getData(row,"FU");
+            var GETRESULTS = result.getData(row,"GETRESULTS");
             var LASTINTERVIEW = result.getData(row,"LASTINTERVIEW");
             var LASTTELSUC = result.getData(row,"LASTTELSUC");
             var NOME = titleCase(result.getData(row,"NOME"));
@@ -61,15 +64,16 @@ function loadPersons() {
             var TELOU1 = result.getData(row,"TELOU1");
             var TELOU2 = result.getData(row,"TELOU2");
             var TELSUC = result.getData(row,"TELSUC");
+            var TESTERESUL = result.getData(row,"TESTERESUL");
 
 
             // generate follow-up date (28 days after last interview with succes follow up)
-            if (FU == 1 & COVID == null) {
+            if (FU == 1 & (COVID == null | CALLBACK == "1" | TESTERESUL == "3")) {
                 var incD = Number(DATINC.slice(2, DATINC.search("M")-1));
                 var incM = DATINC.slice(DATINC.search("M")+2, DATINC.search("Y")-1);
                 var incY = DATINC.slice(DATINC.search("Y")+2);
                 var FUDate = new Date(incY, incM-1, incD + 28);
-            } else if (COVID == null) {
+            } else if (COVID == null | CALLBACK == "1" | TESTERESUL == "3") {
                 var segD = Number(DATSEG.slice(2, DATSEG.search("M")-1));
                 var segM = DATSEG.slice(DATSEG.search("M")+2, DATSEG.search("Y")-1);
                 var segY = DATSEG.slice(DATSEG.search("Y")+2);
@@ -81,7 +85,7 @@ function loadPersons() {
                 var FUDate = new Date(segY, segM-1, segD + 28);
             }   
 
-            var p = {type: 'participant', rowId, BAIRRO, CAMO, COVID, DATINC, DATSEG, DOB, FU, FUDate, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC};
+            var p = {type: 'participant', rowId, BAIRRO, CALLBACK, CAMO, COVID, DATINC, DATSEG, DOB, ESTADO, FU, FUDate, GETRESULTS, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC, TESTERESUL};
             participants.push(p);
         }
         console.log("Participants:", participants)
@@ -113,15 +117,20 @@ function populateView() {
         var called = '';
         if (this.DATSEG == todayAdate) {
             called = "called";
-            console.log("test", this)
+        };
+
+        // check if we only call for test result to change color
+        var getResults = "";
+        if (this.TESTERESUL == "3" & this.CALLBACK != "1" & called != "called" | this.GETRESULTS == "1") {
+            getResults = "getResults";
         };
         
         // set text to display
         var displayText = setDisplayText(that);
         
         // list
-        if (this.FUDate <= today | this.DATSEG == todayAdate) {
-            ul.append($("<li />").append($("<button />").attr('id',this.POID).attr('class', called + ' btn ' + this.type).append(displayText)));
+        if (this.FUDate <= today & this.ESTADO != "2" & this.ESTADO != "3" | this.DATSEG == todayAdate) {
+            ul.append($("<li />").append($("<button />").attr('id',this.POID).attr('class', called + ' btn ' + this.type + getResults).append(displayText)));
         }
         
         // Buttons
@@ -192,6 +201,10 @@ function openForm(person) {
         }
     else {
         var defaults = getDefaults(person);
+        // if we need test results and callback do total interview, else only test results
+        if (person.TESTERESUL == "3" & person.CALLBACK != "1") {
+            defaults["GETRESULTS"] = 1;
+        }
         console.log("Opening form with: ", defaults); 
         odkTables.addRowWithSurvey(
             null,
@@ -237,7 +250,7 @@ function getDefaults(person) {
 
 function getFU(person) {
     var FU;
-    if (person.COVID != null)  {
+    if (person.COVID != null & person.CALLBACK != "1" & person.TESTERESUL != "3")  {
         FU = person.FU + 1;
     } else {
         FU = person.FU + 0.01;
@@ -247,7 +260,7 @@ function getFU(person) {
 
 function getLastInterview(person) {
     var lastInterview;
-    if (person.COVID != null)  {
+    if (person.COVID != null & person.CALLBACK != "1" & person.TESTERESUL != "3")  {
         lastInterview = person.DATSEG;
     } else {
         lastInterview = person.LASTINTERVIEW;
@@ -257,7 +270,7 @@ function getLastInterview(person) {
 
 function getLastTelSuc(person) {
     var lastTelSuc;
-    if (person.COVID != null)  {
+    if (person.COVID != null & person.CALLBACK != "1")  {
         lastTelSuc = person.TELSUC;
     } else {
         lastTelSuc = person.LASTTELSUC;

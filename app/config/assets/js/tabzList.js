@@ -40,7 +40,7 @@ function getTabanca(data) {
 
 function getList() {
     // SQL to get participants
-    var sql = "SELECT _savepoint_type, BAIRRO, COVID, DATINC, DATSEG, FU, LASTINTERVIEW, POID, TABZ " + 
+    var sql = "SELECT _savepoint_type, BAIRRO, CALLBACK, COVID, DATINC, DATSEG, ESTADO, FU, LASTINTERVIEW, POID, TABZ, TESTERESUL " + 
         " FROM OPVCOVID " +
         " WHERE BAIRRO = " + bairro +
         " GROUP BY POID HAVING MAX(FU)"; 
@@ -52,21 +52,24 @@ function getList() {
         for (var row = 0; row < result.getCount(); row++) {
             var savepoint = result.getData(row,"_savepoint_type");
             var BAIRRO = result.getData(row,"BAIRRO");
+            var CALLBACK = result.getData(row,"CALLBACK");
             var COVID = result.getData(row,"COVID");
             var DATINC = result.getData(row,"DATINC");
             var DATSEG = result.getData(row,"DATSEG");
+            var ESTADO = result.getData(row,"ESTADO");
             var FU = result.getData(row,"FU");
             var LASTINTERVIEW = result.getData(row,"LASTINTERVIEW");
             var POID = result.getData(row,"POID");
             var TABZ = result.getData(row,"TABZ");
+            var TESTERESUL = result.getData(row,"TESTERESUL");
 
             // generate follow-up date (28 days after last interview with succes follow up)
-            if (FU == 1 & COVID == null) {
+            if (FU == 1 & (COVID == null | CALLBACK == "1" | TESTERESUL == "3")) {
                 var incD = Number(DATINC.slice(2, DATINC.search("M")-1));
                 var incM = DATINC.slice(DATINC.search("M")+2, DATINC.search("Y")-1);
                 var incY = DATINC.slice(DATINC.search("Y")+2);
                 var FUDate = new Date(incY, incM-1, incD + 28);
-            } else if (COVID == null) {
+            } else if (COVID == null | CALLBACK == "1" | TESTERESUL == "3") {
                 var segD = Number(DATSEG.slice(2, DATSEG.search("M")-1));
                 var segM = DATSEG.slice(DATSEG.search("M")+2, DATSEG.search("Y")-1);
                 var segY = DATSEG.slice(DATSEG.search("Y")+2);
@@ -77,7 +80,8 @@ function getList() {
                 var segY = DATSEG.slice(DATSEG.search("Y")+2);
                 var FUDate = new Date(segY, segM-1, segD + 28);
             }   
-            var p = { type: 'person', savepoint, BAIRRO, COVID, DATINC, DATSEG, FU, FUDate, LASTINTERVIEW, POID, TABZ};
+
+            var p = { type: 'person', savepoint, BAIRRO, CALLBACK, COVID, DATINC, DATSEG, ESTADO, FU, FUDate, LASTINTERVIEW, POID, TABZ, TESTERESUL};
             participants.push(p);
         }
         console.log("Participants:", participants)
@@ -118,7 +122,7 @@ function getCount(tabz) {
     var today = new Date(date);
     var todayAdate = "D:" + today.getDate() + ",M:" + (Number(today.getMonth()) + 1) + ",Y:" + today.getFullYear();
 
-    var total = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & (person.FUDate <= today | person.DATSEG == todayAdate)).length;
+    var total = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & (person.FUDate <= today & person.ESTADO != "2" & person.ESTADO != "3" | person.DATSEG == todayAdate)).length;
     var checked = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & person.DATSEG == todayAdate).length;
     var count = "(" + checked + "/" + total + ")";
     return count;
