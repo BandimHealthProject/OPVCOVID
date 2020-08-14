@@ -5578,6 +5578,19 @@
       },
       {
         "choice_list_name": "HC",
+        "data_value": "301",
+        "display": {
+          "title": {
+            "text": {
+              "english": "HNSM",
+              "default": "HNSM"
+            }
+          }
+        },
+        "_row_num": 41
+      },
+      {
+        "choice_list_name": "HC",
         "data_value": "304",
         "display": {
           "title": {
@@ -5587,7 +5600,7 @@
             }
           }
         },
-        "_row_num": 41
+        "_row_num": 42
       },
       {
         "choice_list_name": "HC",
@@ -5600,7 +5613,7 @@
             }
           }
         },
-        "_row_num": 42
+        "_row_num": 43
       },
       {
         "choice_list_name": "HC",
@@ -5613,7 +5626,7 @@
             }
           }
         },
-        "_row_num": 43
+        "_row_num": 44
       },
       {
         "choice_list_name": "HC",
@@ -5626,7 +5639,7 @@
             }
           }
         },
-        "_row_num": 44
+        "_row_num": 45
       },
       {
         "choice_list_name": "HC",
@@ -5639,7 +5652,7 @@
             }
           }
         },
-        "_row_num": 45
+        "_row_num": 46
       },
       {
         "choice_list_name": "HC",
@@ -5652,7 +5665,7 @@
             }
           }
         },
-        "_row_num": 46
+        "_row_num": 47
       },
       {
         "choice_list_name": "HC",
@@ -5665,7 +5678,7 @@
             }
           }
         },
-        "_row_num": 47
+        "_row_num": 48
       },
       {
         "choice_list_name": "HC",
@@ -5678,7 +5691,7 @@
             }
           }
         },
-        "_row_num": 48
+        "_row_num": 49
       },
       {
         "choice_list_name": "HC",
@@ -5691,7 +5704,7 @@
             }
           }
         },
-        "_row_num": 49
+        "_row_num": 50
       },
       {
         "choice_list_name": "HC",
@@ -5704,7 +5717,7 @@
             }
           }
         },
-        "_row_num": 50
+        "_row_num": 51
       },
       {
         "choice_list_name": "HC",
@@ -5717,7 +5730,7 @@
             }
           }
         },
-        "_row_num": 51
+        "_row_num": 52
       },
       {
         "choice_list_name": "HC",
@@ -5730,7 +5743,7 @@
             }
           }
         },
-        "_row_num": 52
+        "_row_num": 53
       },
       {
         "choice_list_name": "HC",
@@ -5743,7 +5756,7 @@
             }
           }
         },
-        "_row_num": 53
+        "_row_num": 54
       },
       {
         "choice_list_name": "HC",
@@ -5756,7 +5769,7 @@
             }
           }
         },
-        "_row_num": 54
+        "_row_num": 55
       },
       {
         "choice_list_name": "HC",
@@ -5769,7 +5782,7 @@
             }
           }
         },
-        "_row_num": 55
+        "_row_num": 56
       },
       {
         "choice_list_name": "HC",
@@ -5782,7 +5795,7 @@
             }
           }
         },
-        "_row_num": 56
+        "_row_num": 57
       },
       {
         "choice_list_name": "HC",
@@ -5795,7 +5808,7 @@
             }
           }
         },
-        "_row_num": 57
+        "_row_num": 58
       },
       {
         "choice_list_name": "HC",
@@ -5808,7 +5821,7 @@
             }
           }
         },
-        "_row_num": 58
+        "_row_num": 59
       },
       {
         "choice_list_name": "HC",
@@ -5821,7 +5834,7 @@
             }
           }
         },
-        "_row_num": 59
+        "_row_num": 60
       },
       {
         "choice_list_name": "HC",
@@ -5834,7 +5847,7 @@
             }
           }
         },
-        "_row_num": 60
+        "_row_num": 61
       },
       {
         "choice_list_name": "HC",
@@ -5847,7 +5860,7 @@
             }
           }
         },
-        "_row_num": 61
+        "_row_num": 62
       },
       {
         "choice_list_name": "HC",
@@ -5860,7 +5873,7 @@
             }
           }
         },
-        "_row_num": 62
+        "_row_num": 63
       }
     ],
     "calculates": [
@@ -7764,6 +7777,19 @@
       "HC": [
         {
           "choice_list_name": "HC",
+          "data_value": "301",
+          "display": {
+            "title": {
+              "text": {
+                "english": "HNSM",
+                "default": "HNSM"
+              }
+            }
+          },
+          "_row_num": 41
+        },
+        {
+          "choice_list_name": "HC",
           "data_value": "304",
           "display": {
             "title": {
@@ -7773,7 +7799,7 @@
               }
             }
           },
-          "_row_num": 41
+          "_row_num": 42
         },
         {
           "choice_list_name": "HC",
@@ -7786,7 +7812,7 @@
               }
             }
           },
-          "_row_num": 42
+          "_row_num": 43
         },
         {
           "choice_list_name": "HC",
@@ -7799,7 +7825,7 @@
               }
             }
           },
-          "_row_num": 43
+          "_row_num": 44
         },
         {
           "choice_list_name": "HC",
@@ -7812,7 +7838,7 @@
               }
             }
           },
-          "_row_num": 44
+          "_row_num": 45
         },
         {
           "choice_list_name": "HC",
@@ -7825,7 +7851,7 @@
               }
             }
           },
-          "_row_num": 45
+          "_row_num": 46
         },
         {
           "choice_list_name": "HC",
@@ -7838,7 +7864,7 @@
               }
             }
           },
-          "_row_num": 46
+          "_row_num": 47
         },
         {
           "choice_list_name": "HC",
@@ -7851,7 +7877,7 @@
               }
             }
           },
-          "_row_num": 47
+          "_row_num": 48
         },
         {
           "choice_list_name": "HC",
@@ -7864,7 +7890,7 @@
               }
             }
           },
-          "_row_num": 48
+          "_row_num": 49
         },
         {
           "choice_list_name": "HC",
@@ -7877,7 +7903,7 @@
               }
             }
           },
-          "_row_num": 49
+          "_row_num": 50
         },
         {
           "choice_list_name": "HC",
@@ -7890,7 +7916,7 @@
               }
             }
           },
-          "_row_num": 50
+          "_row_num": 51
         },
         {
           "choice_list_name": "HC",
@@ -7903,7 +7929,7 @@
               }
             }
           },
-          "_row_num": 51
+          "_row_num": 52
         },
         {
           "choice_list_name": "HC",
@@ -7916,7 +7942,7 @@
               }
             }
           },
-          "_row_num": 52
+          "_row_num": 53
         },
         {
           "choice_list_name": "HC",
@@ -7929,7 +7955,7 @@
               }
             }
           },
-          "_row_num": 53
+          "_row_num": 54
         },
         {
           "choice_list_name": "HC",
@@ -7942,7 +7968,7 @@
               }
             }
           },
-          "_row_num": 54
+          "_row_num": 55
         },
         {
           "choice_list_name": "HC",
@@ -7955,7 +7981,7 @@
               }
             }
           },
-          "_row_num": 55
+          "_row_num": 56
         },
         {
           "choice_list_name": "HC",
@@ -7968,7 +7994,7 @@
               }
             }
           },
-          "_row_num": 56
+          "_row_num": 57
         },
         {
           "choice_list_name": "HC",
@@ -7981,7 +8007,7 @@
               }
             }
           },
-          "_row_num": 57
+          "_row_num": 58
         },
         {
           "choice_list_name": "HC",
@@ -7994,7 +8020,7 @@
               }
             }
           },
-          "_row_num": 58
+          "_row_num": 59
         },
         {
           "choice_list_name": "HC",
@@ -8007,7 +8033,7 @@
               }
             }
           },
-          "_row_num": 59
+          "_row_num": 60
         },
         {
           "choice_list_name": "HC",
@@ -8020,7 +8046,7 @@
               }
             }
           },
-          "_row_num": 60
+          "_row_num": 61
         },
         {
           "choice_list_name": "HC",
@@ -8033,7 +8059,7 @@
               }
             }
           },
-          "_row_num": 61
+          "_row_num": 62
         },
         {
           "choice_list_name": "HC",
@@ -8046,7 +8072,7 @@
               }
             }
           },
-          "_row_num": 62
+          "_row_num": 63
         }
       ]
     },
@@ -22902,7 +22928,7 @@
         "_aspect": "CONS1ONDE",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":62}]"
+        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"301\",\"display\":{\"title\":{\"text\":{\"english\":\"HNSM\",\"default\":\"HNSM\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":62},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":63}]"
       },
       {
         "_partition": "Column",
@@ -22916,7 +22942,7 @@
         "_aspect": "CONS2ONDE",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":62}]"
+        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"301\",\"display\":{\"title\":{\"text\":{\"english\":\"HNSM\",\"default\":\"HNSM\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":62},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":63}]"
       },
       {
         "_partition": "Column",
@@ -22930,7 +22956,7 @@
         "_aspect": "CONS3ONDE",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":62}]"
+        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"301\",\"display\":{\"title\":{\"text\":{\"english\":\"HNSM\",\"default\":\"HNSM\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":62},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":63}]"
       },
       {
         "_partition": "Column",
@@ -22944,7 +22970,7 @@
         "_aspect": "CONS4ONDE",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":62}]"
+        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"301\",\"display\":{\"title\":{\"text\":{\"english\":\"HNSM\",\"default\":\"HNSM\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":62},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":63}]"
       },
       {
         "_partition": "Column",
@@ -22958,7 +22984,7 @@
         "_aspect": "CONS5ONDE",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":62}]"
+        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"301\",\"display\":{\"title\":{\"text\":{\"english\":\"HNSM\",\"default\":\"HNSM\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":62},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":63}]"
       },
       {
         "_partition": "Column",
@@ -23308,7 +23334,7 @@
         "_aspect": "HOSP1ONDE",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":62}]"
+        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"301\",\"display\":{\"title\":{\"text\":{\"english\":\"HNSM\",\"default\":\"HNSM\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":62},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":63}]"
       },
       {
         "_partition": "Column",
@@ -23329,7 +23355,7 @@
         "_aspect": "HOSP2ONDE",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":62}]"
+        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"301\",\"display\":{\"title\":{\"text\":{\"english\":\"HNSM\",\"default\":\"HNSM\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":62},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":63}]"
       },
       {
         "_partition": "Column",
@@ -23350,7 +23376,7 @@
         "_aspect": "HOSP3ONDE",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":62}]"
+        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"301\",\"display\":{\"title\":{\"text\":{\"english\":\"HNSM\",\"default\":\"HNSM\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":62},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":63}]"
       },
       {
         "_partition": "Column",
@@ -23371,7 +23397,7 @@
         "_aspect": "HOSP4ONDE",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":62}]"
+        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"301\",\"display\":{\"title\":{\"text\":{\"english\":\"HNSM\",\"default\":\"HNSM\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":62},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":63}]"
       },
       {
         "_partition": "Column",
@@ -23392,7 +23418,7 @@
         "_aspect": "HOSP5ONDE",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":62}]"
+        "_value": "[{\"choice_list_name\":\"HC\",\"data_value\":\"301\",\"display\":{\"title\":{\"text\":{\"english\":\"HNSM\",\"default\":\"HNSM\"}}},\"_row_num\":41},{\"choice_list_name\":\"HC\",\"data_value\":\"304\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":42},{\"choice_list_name\":\"HC\",\"data_value\":\"305\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Belem\",\"default\":\"CS Belem\"}}},\"_row_num\":43},{\"choice_list_name\":\"HC\",\"data_value\":\"306\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum. Sobrada\",\"default\":\"CS Cuntum. Sobrada\"}}},\"_row_num\":44},{\"choice_list_name\":\"HC\",\"data_value\":\"307\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum Madina\",\"default\":\"CS Cuntum Madina\"}}},\"_row_num\":45},{\"choice_list_name\":\"HC\",\"data_value\":\"308\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Plak\",\"default\":\"CS Plak\"}}},\"_row_num\":46},{\"choice_list_name\":\"HC\",\"data_value\":\"309\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Quelele\",\"default\":\"CS Quelele\"}}},\"_row_num\":47},{\"choice_list_name\":\"HC\",\"data_value\":\"310\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceu et Terra\",\"default\":\"Ceu et Terra\"}}},\"_row_num\":48},{\"choice_list_name\":\"HC\",\"data_value\":\"311\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica de Bra. Seminario de Padre\",\"default\":\"Clinica de Bra. Seminario de Padre\"}}},\"_row_num\":49},{\"choice_list_name\":\"HC\",\"data_value\":\"312\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bairro Militar\",\"default\":\"CS Bairro Militar\"}}},\"_row_num\":50},{\"choice_list_name\":\"HC\",\"data_value\":\"313\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital Militar. Chines\",\"default\":\"Hospital Militar. Chines\"}}},\"_row_num\":51},{\"choice_list_name\":\"HC\",\"data_value\":\"314\",\"display\":{\"title\":{\"text\":{\"english\":\"Casa Emanuel\",\"default\":\"Casa Emanuel\"}}},\"_row_num\":52},{\"choice_list_name\":\"HC\",\"data_value\":\"315\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Ajuda\",\"default\":\"CS Ajuda\"}}},\"_row_num\":53},{\"choice_list_name\":\"HC\",\"data_value\":\"316\",\"display\":{\"title\":{\"text\":{\"english\":\"Raul Follerau\",\"default\":\"Raul Follerau\"}}},\"_row_num\":54},{\"choice_list_name\":\"HC\",\"data_value\":\"317\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica Sissoko. Mindara\",\"default\":\"Clinica Sissoko. Mindara\"}}},\"_row_num\":55},{\"choice_list_name\":\"HC\",\"data_value\":\"318\",\"display\":{\"title\":{\"text\":{\"english\":\"Clinica 3 di Augusto\",\"default\":\"Clinica 3 di Augusto\"}}},\"_row_num\":56},{\"choice_list_name\":\"HC\",\"data_value\":\"319\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Antula\",\"default\":\"CS Antula\"}}},\"_row_num\":57},{\"choice_list_name\":\"HC\",\"data_value\":\"320\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Gã Beafada\",\"default\":\"CS Gã Beafada\"}}},\"_row_num\":58},{\"choice_list_name\":\"HC\",\"data_value\":\"321\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Pefine\",\"default\":\"CS Pefine\"}}},\"_row_num\":59},{\"choice_list_name\":\"HC\",\"data_value\":\"322\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Santa Luzia\",\"default\":\"CS Santa Luzia\"}}},\"_row_num\":60},{\"choice_list_name\":\"HC\",\"data_value\":\"323\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Luanda\",\"default\":\"CS Luanda\"}}},\"_row_num\":61},{\"choice_list_name\":\"HC\",\"data_value\":\"324\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Missará\",\"default\":\"CS Missará\"}}},\"_row_num\":62},{\"choice_list_name\":\"HC\",\"data_value\":\"325\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Centro\",\"default\":\"CS Centro\"}}},\"_row_num\":63}]"
       },
       {
         "_partition": "Column",
