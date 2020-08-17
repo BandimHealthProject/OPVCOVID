@@ -120,7 +120,7 @@ function initDate() {
 function initButtons() {
     // Bairro buttons
     var btn01 = $('#btn01');
-    btn01.html("Bandim II <br />" + getCount(1));
+    btn01.html("Bandim I <br />" + getCount(1));
     btn01.on("click", function() {
         var bairro = 1;
         var date = new Date(selYea.val(), selMon.val()-1, selDay.val());

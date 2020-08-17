@@ -168,7 +168,7 @@ function setDisplayText(person) {
         "Sexo: " + sex + "<br />" +
         "Nacimento: " + dob + "<br />" +
         "Tabz: " + person.TABZ + "; Camo: " + person.CAMO + "<br />" +
-        "Inscrição: " + datinc;
+        "Inclusão: " + datinc;
     return displayText
 }
 
