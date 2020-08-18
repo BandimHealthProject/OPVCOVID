@@ -23,7 +23,7 @@ function display() {
 
 function loadPersons() {
     // SQL to get persons
-    var varNames = "_id, BAIRRO, CALLBACK, CAMO, COVID, DATINC, DATSEG, DOB, ESTADO, FU, GETRESULTS, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC, TESTERESUL";
+    var varNames = "_id, _savepoint_type, BAIRRO, CALLBACK, CAMO, COVID, DATINC, DATSEG, DOB, ESTADO, FU, GETRESULTS, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC, TESTERESUL";
     var sql = "SELECT " + varNames +
         " FROM OPVCOVID" + 
         " WHERE BAIRRO = " + bairro + " AND TABZ = " + tabz + 
@@ -36,6 +36,7 @@ function loadPersons() {
         console.log("Found " + result.getCount() + " participants");
         for (var row = 0; row < result.getCount(); row++) {
             var rowId = result.getData(row,"_id"); // row ID 
+            var savepoint = result.getData(row,"_savepoint_type")
 
             var BAIRRO = result.getData(row,"BAIRRO");
             var CALLBACK = result.getData(row,"CALLBACK");
@@ -85,7 +86,7 @@ function loadPersons() {
                 var FUDate = new Date(segY, segM-1, segD + 28);
             }   
 
-            var p = {type: 'participant', rowId, BAIRRO, CALLBACK, CAMO, COVID, DATINC, DATSEG, DOB, ESTADO, FU, FUDate, GETRESULTS, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC, TESTERESUL};
+            var p = {type: 'participant', rowId, savepoint, BAIRRO, CALLBACK, CAMO, COVID, DATINC, DATSEG, DOB, ESTADO, FU, FUDate, GETRESULTS, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC, TESTERESUL};
             participants.push(p);
         }
         console.log("Participants:", participants)
@@ -115,7 +116,7 @@ function populateView() {
         
         // Check if called today
         var called = '';
-        if (this.DATSEG == todayAdate) {
+        if (this.DATSEG == todayAdate & this.savepoint == "COMPLETE") {
             called = "called";
         };
 
@@ -129,7 +130,7 @@ function populateView() {
         var displayText = setDisplayText(that);
         
         // list
-        if (this.FUDate <= today & this.ESTADO != "2" & this.ESTADO != "3" | this.DATSEG == todayAdate) {
+        if (this.FUDate <= today & ((this.ESTADO != "2" & this.ESTADO != "3") | this.CALLBACK == "1" | this.TESTERESUL == "3") | this.DATSEG == todayAdate) {
             ul.append($("<li />").append($("<button />").attr('id',this.POID).attr('class', called + ' btn ' + this.type + getResults).append(displayText)));
         }
         
@@ -186,7 +187,6 @@ function openForm(person) {
     var today = new Date(date);
     var todayAdate = "D:" + today.getDate() + ",M:" + (Number(today.getMonth()) + 1) + ",Y:" + today.getFullYear();
 
-    // uuid prob
     var rowId = person.rowId;
     var tableId = 'OPVCOVID';
     var formId = 'OPVCOVID';
@@ -204,6 +204,7 @@ function openForm(person) {
         // if we need test results and callback do total interview, else only test results
         if (person.TESTERESUL == "3" & person.CALLBACK != "1") {
             defaults["GETRESULTS"] = 1;
+            defaults["ESTADO"] = person.ESTADO;
         }
         console.log("Opening form with: ", defaults); 
         odkTables.addRowWithSurvey(
@@ -251,7 +252,7 @@ function getDefaults(person) {
 function getFU(person) {
     var FU;
     if (person.COVID != null & person.CALLBACK != "1" & person.TESTERESUL != "3")  {
-        FU = person.FU + 1;
+        FU = floor(person.FU) + 1;
     } else {
         FU = person.FU + 0.01;
     }

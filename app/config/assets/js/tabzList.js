@@ -51,6 +51,7 @@ function getList() {
         console.log("Found " + result.getCount() + " participants");
         for (var row = 0; row < result.getCount(); row++) {
             var savepoint = result.getData(row,"_savepoint_type");
+
             var BAIRRO = result.getData(row,"BAIRRO");
             var CALLBACK = result.getData(row,"CALLBACK");
             var COVID = result.getData(row,"COVID");
@@ -122,8 +123,8 @@ function getCount(tabz) {
     var today = new Date(date);
     var todayAdate = "D:" + today.getDate() + ",M:" + (Number(today.getMonth()) + 1) + ",Y:" + today.getFullYear();
 
-    var total = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & (person.FUDate <= today & person.ESTADO != "2" & person.ESTADO != "3" | person.DATSEG == todayAdate)).length;
-    var checked = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & person.DATSEG == todayAdate).length;
+    var total = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & (person.FUDate <= today & ((person.ESTADO != "2" & person.ESTADO != "3") | person.CALLBACK == "1" | person.TESTERESUL == "3") | person.DATSEG == todayAdate)).length;
+    var checked = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & person.DATSEG == todayAdate & person.savepoint == "COMPLETE").length;
     var count = "(" + checked + "/" + total + ")";
     return count;
 }
