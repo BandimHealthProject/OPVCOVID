@@ -13,7 +13,6 @@ function display() {
     houseGroup = util.getQueryParameter('houseGroup');
     camo = util.getQueryParameter('camo');
     
-    var bairroName = {1: "Bandim I", 2: "Bandim II", 3: "Belem", 4: "Mindara", 7: "Cuntum I", 9: "Cuntum II"};
     var head = $('#main');
     head.prepend("<h3>" + tabz + " - " + houseGroup + " - " + camo);
     // populate list
