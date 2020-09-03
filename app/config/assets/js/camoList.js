@@ -3,15 +3,18 @@
  */
 'use strict';
 
-var participants, masterFamList, date, bairro;
+var participants, masterFamList, date, bairro, tabz, zone, houseGroup;
 function display() {
     console.log("TABZ list loading");
     date = util.getQueryParameter('date');
     bairro = util.getQueryParameter('bairro');
+    tabz = util.getQueryParameter('tabz');
+    zone = util.getQueryParameter('zone');
+    houseGroup = util.getQueryParameter('houseGroup');
     
     var bairroName = {1: "Bandim I", 2: "Bandim II", 3: "Belem", 4: "Mindara", 7: "Cuntum I", 9: "Cuntum II"};
     var head = $('#main');
-    head.prepend("<h1>" + bairroName[bairro] + " </br> <h3> Zonas");
+    head.prepend("<h1>" + tabz + " - " + houseGroup + " </br> <h3> Camo");
     
     doSanityCheck();
     getList();
@@ -41,29 +44,51 @@ function getMasterList(data) {
 
 function getList() {
     // SQL to get participants
-    var sql = "SELECT _savepoint_type, BAIRRO, CALLBACK, COVID, DATINC, DATSEG, ESTADO, FU, LASTINTERVIEW, POID, TABZ, TESTERESUL " + 
-        " FROM OPVCOVID " +
-        " WHERE BAIRRO = " + bairro +
-        " GROUP BY POID HAVING MAX(FU)"; 
+    var varNames = "_id, _savepoint_type, BAIRRO, CALLBACK, CAMO, COVID, DATINC, DATSEG, DOB, ESTADO, FU, GETRESULTS, HOUSEGRP, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC, TESTERESUL";
+    var sql = "SELECT " + varNames +
+        " FROM OPVCOVID" + 
+        " WHERE BAIRRO = " + bairro + " AND TABZ = " + tabz + " AND HOUSEGRP = '" + houseGroup + "'" +
+        " GROUP BY POID HAVING MAX(FU)" +
+        " ORDER BY CAMO, POID";
     participants = [];
     console.log("Querying database for participants...");
     console.log(sql);
     var successFn = function( result ) {
         console.log("Found " + result.getCount() + " participants");
         for (var row = 0; row < result.getCount(); row++) {
-            var savepoint = result.getData(row,"_savepoint_type");
+            var rowId = result.getData(row,"_id"); // row ID 
+            var savepoint = result.getData(row,"_savepoint_type")
 
             var BAIRRO = result.getData(row,"BAIRRO");
             var CALLBACK = result.getData(row,"CALLBACK");
+            var CAMO = result.getData(row,"CAMO");
             var COVID = result.getData(row,"COVID");
             var DATINC = result.getData(row,"DATINC");
             var DATSEG = result.getData(row,"DATSEG");
+            var DOB = result.getData(row,"DOB");
             var ESTADO = result.getData(row,"ESTADO");
             var FU = result.getData(row,"FU");
+            var GETRESULTS = result.getData(row,"GETRESULTS");
+            var HOUSEGRP = result.getData(row,"HOUSEGRP");
             var LASTINTERVIEW = result.getData(row,"LASTINTERVIEW");
+            var LASTTELSUC = result.getData(row,"LASTTELSUC");
+            var NOME = titleCase(result.getData(row,"NOME"));
+            var NUMEST = result.getData(row,"NUMEST");
             var POID = result.getData(row,"POID");
+            var SEX = result.getData(row,"SEX");
             var TABZ = result.getData(row,"TABZ");
+            var TELE = result.getData(row,"TELE");
+            var TELMTN1 = result.getData(row,"TELMTN1");
+            var TELMTN2 = result.getData(row,"TELMTN2");
+            var TELMTN3 = result.getData(row,"TELMTN3");
+            var TELORA1 = result.getData(row,"TELORA1");
+            var TELORA2 = result.getData(row,"TELORA2");
+            var TELORA3 = result.getData(row,"TELORA3");
+            var TELOU1 = result.getData(row,"TELOU1");
+            var TELOU2 = result.getData(row,"TELOU2");
+            var TELSUC = result.getData(row,"TELSUC");
             var TESTERESUL = result.getData(row,"TESTERESUL");
+
 
             // generate follow-up date (28 days after last interview with succes follow up)
             if (FU == 1 & (COVID == null | CALLBACK == "1" | TESTERESUL == "3")) {
@@ -83,7 +108,7 @@ function getList() {
                 var FUDate = new Date(segY, segM-1, segD + 28);
             }   
 
-            var p = { type: 'person', savepoint, BAIRRO, CALLBACK, COVID, DATINC, DATSEG, ESTADO, FU, FUDate, LASTINTERVIEW, POID, TABZ, TESTERESUL};
+            var p = {type: 'participant', rowId, savepoint, BAIRRO, CALLBACK, CAMO, COVID, DATINC, DATSEG, DOB, ESTADO, FU, FUDate, GETRESULTS, HOUSEGRP, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC, TESTERESUL};
             participants.push(p);
         }
         console.log("Participants:", participants)
@@ -103,44 +128,47 @@ function initButtons() {
     // Zone buttons
     var ul = $('#li');
     console.log("initB",masterFamList);
-    
-    const listFromMaster = []; 
+
+    const listFromMaster = [];
     const map = new Map();
     for (const item of masterFamList) {
-        if (item.bairro == bairro) {
-            if(!map.has(item.tabz)){
-                map.set(item.tabz, true);    // set any value to Map
+        if (item.bairro == bairro & item.tabz == tabz & item.houseGroup == houseGroup) {
+            if(!map.has(item.camo)){
+                map.set(item.camo, true);    // set any value to Map
                 listFromMaster.push({
                     bairro: item.bairro,
                     tabz: item.tabz,
-                    zone: item.zone
+                    zone: item.zone,
+                    houseGroup: item.houseGroup,
+                    camo: item.camo
                 });
             }
         }
     }
 
-    console.log("listFromMaster", listFromMaster);
+    console.log("test", listFromMaster);
 
     $.each(listFromMaster, function() {
         var that = this;
         // list
-        ul.append($("<li />").append($("<button />").attr('id',this.tabz).attr('class','btn' + this.bairro).append(this.zone).append(" " + getCount(this.tabz))));
+        ul.append($("<li />").append($("<button />").attr('id',this.camo).attr('class','btn' + this.bairro).append(this.camo).append(" " + getCount(this.camo))));
+        
         
         // Buttons
-        var btn = ul.find('#' + this.tabz);
+        var btn = ul.find('#' + this.camo);
         btn.on("click", function() {
-            var queryParams = util.setQuerystringParams(date, that.bairro, that.tabz, that.zone);
-            odkTables.launchHTML(null, 'config/assets/houseGroupList.html' + queryParams);
+            var queryParams = util.setQuerystringParams(date, that.bairro, that.tabz, that.zone, that.houseGroup, that.camo);
+            odkTables.launchHTML(null, 'config/assets/list.html' + queryParams);
         })        
     });
 }
 
-function getCount(tabz) {
+function getCount(camo) {
     var today = new Date(date);
     var todayAdate = "D:" + today.getDate() + ",M:" + (Number(today.getMonth()) + 1) + ",Y:" + today.getFullYear();
 
-    var total = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & (person.FUDate <= today & ((person.ESTADO != "2" & person.ESTADO != "3") | person.CALLBACK == "1" | person.TESTERESUL == "3") | person.DATSEG == todayAdate)).length;
-    var checked = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & person.DATSEG == todayAdate & person.savepoint == "COMPLETE").length;
+    var total = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & person.HOUSEGRP == houseGroup & person.CAMO == camo & (person.FUDate <= today & ((person.ESTADO != "2" & person.ESTADO != "3") | person.CALLBACK == "1" | person.TESTERESUL == "3") | person.DATSEG == todayAdate)).length;
+    var checked = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & person.HOUSEGRP == houseGroup & person.CAMO == camo & person.DATSEG == todayAdate & person.savepoint == "COMPLETE").length;
     var count = "(" + checked + "/" + total + ")";
     return count;
 }

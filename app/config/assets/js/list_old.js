@@ -3,31 +3,32 @@
  */
 'use strict';
 
-var participants, date, bairro, tabz, zone, houseGroup, camo;
+var participants, bairro, tabz, zone, date;
 function display() {
-    console.log("TABZ list loading");
+    console.log("List loading");
+    bairro = util.getQueryParameter('region');
+    tabz = util.getQueryParameter('tabanca');
+    zone = util.getQueryParameter('assistant');
     date = util.getQueryParameter('date');
-    bairro = util.getQueryParameter('bairro');
-    tabz = util.getQueryParameter('tabz');
-    zone = util.getQueryParameter('zone');
-    houseGroup = util.getQueryParameter('houseGroup');
-    camo = util.getQueryParameter('camo');
     
+    console.log("Preparing list with bairro = " + bairro + " and tabz = " + tabz);
+    // Set the header to zone choosen
+
     var bairroName = {1: "Bandim I", 2: "Bandim II", 3: "Belem", 4: "Mindara", 7: "Cuntum I", 9: "Cuntum II"};
     var head = $('#main');
-    head.prepend("<h3>" + tabz + " - " + houseGroup + " - " + camo);
+    head.prepend("<h1>" + bairroName[bairro] + " </br> <h3>" + zone);
     // populate list
     loadPersons();
 }
 
 function loadPersons() {
     // SQL to get persons
-    var varNames = "_id, _savepoint_type, BAIRRO, CALLBACK, CAMO, COVID, DATINC, DATSEG, DOB, ESTADO, FU, GETRESULTS, HOUSEGRP, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC, TESTERESUL";
+    var varNames = "_id, _savepoint_type, BAIRRO, CALLBACK, CAMO, COVID, DATINC, DATSEG, DOB, ESTADO, FU, GETRESULTS, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC, TESTERESUL";
     var sql = "SELECT " + varNames +
         " FROM OPVCOVID" + 
-        " WHERE BAIRRO = " + bairro + " AND TABZ = " + tabz + " AND HOUSEGRP = '" + houseGroup + "' AND CAMO = " + camo +
+        " WHERE BAIRRO = " + bairro + " AND TABZ = " + tabz + 
         " GROUP BY POID HAVING MAX(FU)" +
-        " ORDER BY POID";
+        " ORDER BY CAMO, POID";
         participants = [];
     console.log("Querying database for participants...");
     console.log(sql);
@@ -47,7 +48,6 @@ function loadPersons() {
             var ESTADO = result.getData(row,"ESTADO");
             var FU = result.getData(row,"FU");
             var GETRESULTS = result.getData(row,"GETRESULTS");
-            var HOUSEGRP = result.getData(row,"HOUSEGRP");
             var LASTINTERVIEW = result.getData(row,"LASTINTERVIEW");
             var LASTTELSUC = result.getData(row,"LASTTELSUC");
             var NOME = titleCase(result.getData(row,"NOME"));
@@ -86,7 +86,7 @@ function loadPersons() {
                 var FUDate = new Date(segY, segM-1, segD + 28);
             }   
 
-            var p = {type: 'participant', rowId, savepoint, BAIRRO, CALLBACK, CAMO, COVID, DATINC, DATSEG, DOB, ESTADO, FU, FUDate, GETRESULTS, HOUSEGRP, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC, TESTERESUL};
+            var p = {type: 'participant', rowId, savepoint, BAIRRO, CALLBACK, CAMO, COVID, DATINC, DATSEG, DOB, ESTADO, FU, FUDate, GETRESULTS, LASTINTERVIEW, LASTTELSUC, NOME, NUMEST, POID, SEX, TABZ, TELE, TELMTN1, TELMTN2, TELMTN3, TELORA1, TELORA2, TELORA3, TELOU1, TELOU2, TELSUC, TESTERESUL};
             participants.push(p);
         }
         console.log("Participants:", participants)
@@ -229,7 +229,6 @@ function getDefaults(person) {
     defaults['DATSEG'] = toAdate(date);
     defaults['DOB'] = person.DOB;
     defaults['FU'] = getFU(person);
-    defaults['HPUSEGRP'] = person.HOUSEGRP;
     defaults['LASTINTERVIEW'] = getLastInterview(person);
     defaults['LASTTELSUC'] = getLastTelSuc(person);
     defaults['NOME'] = person.NOME;

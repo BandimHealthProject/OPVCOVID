@@ -3,11 +3,11 @@
  */
 'use strict';
 
-var participants, masterFamList, date, bairro;
+var participants, bairro, tabz, date;
 function display() {
     console.log("TABZ list loading");
+    bairro = util.getQueryParameter('region');
     date = util.getQueryParameter('date');
-    bairro = util.getQueryParameter('bairro');
     
     var bairroName = {1: "Bandim I", 2: "Bandim II", 3: "Belem", 4: "Mindara", 7: "Cuntum I", 9: "Cuntum II"};
     var head = $('#main');
@@ -24,18 +24,17 @@ function doSanityCheck() {
 
 // Get tabz from CSV
 $.ajax({
-    url: 'masterFamList.csv',
+    url: 'TABZ.csv',
     dataType: 'text',
-}).done(getMasterList);
+}).done(getTabanca);
 
-function getMasterList(data) {
-    masterFamList = [];
+function getTabanca(data) {
+    tabz = [];
     var allRows = data.split(/\r?\n|\r/);
     for (var row = 1; row < allRows.length; row++) {  // start at row = 1 to skip header
-            allRows[row] = allRows[row].replace(/"/g,""); // remove quotes from strings
             var rowValues = allRows[row].split(",");
-            var p = {bairro: rowValues[0], tabz: rowValues[1], zone: rowValues[2], houseGroup: rowValues[3], camo: rowValues[4]};
-            masterFamList.push(p);
+            var p = {bairroName: rowValues[0], bairro: rowValues[1], zone: rowValues[2], tabz: rowValues[3]};
+            tabz.push(p);
     }
 }
 
@@ -102,35 +101,20 @@ function getList() {
 function initButtons() {
     // Zone buttons
     var ul = $('#li');
-    console.log("initB",masterFamList);
-    
-    const listFromMaster = []; 
-    const map = new Map();
-    for (const item of masterFamList) {
-        if (item.bairro == bairro) {
-            if(!map.has(item.tabz)){
-                map.set(item.tabz, true);    // set any value to Map
-                listFromMaster.push({
-                    bairro: item.bairro,
-                    tabz: item.tabz,
-                    zone: item.zone
-                });
-            }
+    console.log("initB",tabz);
+
+    $.each(tabz, function() {
+        var that = this;   
+        if (that.bairro == bairro) {
+            // list
+            ul.append($("<li />").append($("<button />").attr('id',this.tabz).attr('class','btn' + this.bairro).append(this.zone).append(" " + getCount(this.tabz))));
         }
-    }
-
-    console.log("listFromMaster", listFromMaster);
-
-    $.each(listFromMaster, function() {
-        var that = this;
-        // list
-        ul.append($("<li />").append($("<button />").attr('id',this.tabz).attr('class','btn' + this.bairro).append(this.zone).append(" " + getCount(this.tabz))));
         
         // Buttons
         var btn = ul.find('#' + this.tabz);
         btn.on("click", function() {
-            var queryParams = util.setQuerystringParams(date, that.bairro, that.tabz, that.zone);
-            odkTables.launchHTML(null, 'config/assets/houseGroupList.html' + queryParams);
+            var queryParams = util.setQuerystringParams(that.bairro, that.tabz, that.zone, null, date);
+            odkTables.launchHTML(null, 'config/assets/list.html' + queryParams);
         })        
     });
 }
