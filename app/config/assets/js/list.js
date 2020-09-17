@@ -252,7 +252,7 @@ function getDefaults(person) {
 function getFU(person) {
     var FU;
     if (person.COVID != null & person.CALLBACK != "1" & person.TESTERESUL != "3")  {
-        FU = floor(person.FU) + 1;
+        FU = Math.floor(person.FU) + 1;
     } else {
         FU = person.FU + 0.01;
     }
