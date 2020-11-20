@@ -114,7 +114,7 @@ function initButtons() {
         var btn = ul.find('#' + this.tabz);
         btn.on("click", function() {
             var queryParams = util.setQuerystringParams(that.bairro, that.tabz, that.zone, null, date);
-            odkTables.launchHTML(null, 'config/assets/list.html' + queryParams);
+            odkTables.launchHTML(null, 'config/assets/fuList.html' + queryParams);
         })        
     });
 }
