@@ -113,7 +113,7 @@ function populateView() {
     // list
     $.each(participants, function() {
         var that = this;  
-        
+
         // Check if called today
         var called = '';
         if (this.DATSEG == todayAdate & this.savepoint == "COMPLETE") {
@@ -126,12 +126,22 @@ function populateView() {
             getResults = "getResults";
         };
         
+        // set color according to urgency of follow up
+        var color = "";
+        if (today > addDays(this.FUDate, 14)) {
+            color = "red";
+        } else if (today > addDays(this.FUDate, 7)) {
+            color = "yellow";
+        } else {
+            color = "green";
+        }
+
         // set text to display
         var displayText = setDisplayText(that);
         
         // list
         if (this.FUDate <= today & ((this.ESTADO != "2" & this.ESTADO != "3") | this.CALLBACK == "1" | this.TESTERESUL == "3") | this.DATSEG == todayAdate) {
-            ul.append($("<li />").append($("<button />").attr('id',this.POID).attr('class', called + ' btn ' + this.type + getResults).append(displayText)));
+            ul.append($("<li />").append($("<button />").attr('id',this.POID).attr('class', called + getResults + ' btn ' + this.type + color).append(displayText)));
         }
         
         // Buttons
@@ -142,6 +152,11 @@ function populateView() {
     });
 }
 
+function addDays(date, days) {
+    var newDate = new Date(date);
+    newDate.setDate(date.getDate() + days);
+    return newDate;
+}
 
 function setDisplayText(person) {
     var dob;
