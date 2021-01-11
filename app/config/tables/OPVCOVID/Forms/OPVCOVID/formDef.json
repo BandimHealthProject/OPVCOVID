@@ -622,6 +622,14 @@
         "type": "select_one",
         "values_list": "vitalstatus",
         "name": "ESTADO",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Status",
+              "default": "Estado"
+            }
+          }
+        },
         "_row_num": 73
       },
       {
@@ -632,14 +640,6 @@
       {
         "type": "assign",
         "name": "ESTADO",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Status",
-              "default": "Estado"
-            }
-          }
-        },
         "calculation": "1",
         "_row_num": 75
       },
@@ -12166,6 +12166,14 @@
             "type": "select_one",
             "values_list": "vitalstatus",
             "name": "ESTADO",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Status",
+                  "default": "Estado"
+                }
+              }
+            },
             "_row_num": 73,
             "__rowNum__": 72,
             "_token_type": "prompt",
