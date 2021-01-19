@@ -140,9 +140,9 @@ function populateView() {
         
         // set color according to urgency of follow up
         var color = "";
-        if (today > addDays(this.FUDate, 14)) {
+        if (today > addDays(this.LastFU, 28 + 14)) {
             color = "red";
-        } else if (today > addDays(this.FUDate, 7)) {
+        } else if (today > addDays(this.LastFU, 28 + 7)) {
             color = "yellow";
         } else {
             color = "green";
