@@ -75,6 +75,7 @@
             }
           }
         },
+        "constraint": "data(\"C_CS\") != null",
         "_row_num": 3
       },
       {
@@ -100,6 +101,7 @@
             }
           }
         },
+        "constraint": "data(\"C_DATE\") != null",
         "_row_num": 6
       },
       {
@@ -113,6 +115,7 @@
             }
           }
         },
+        "constraint": "data(\"C_NAME\") != null",
         "_row_num": 8
       },
       {
@@ -122,10 +125,11 @@
           "prompt": {
             "text": {
               "english": "Numest; PC:",
-              "default": "Numest; PC:"
+              "default": "Numest; PC: (Se desconhecido \"9999\")"
             }
           }
         },
+        "constraint": "data(\"C_NUMEST\") != null",
         "_row_num": 9
       },
       {
@@ -136,10 +140,11 @@
           "prompt": {
             "text": {
               "english": "Identified in the consultation Book?",
-              "default": "A pessoa foi identificada no livro de consulta?"
+              "default": "A pessoa foi identificada no livro de consulta? (Temos infomacao de consulta)"
             }
           }
         },
+        "constraint": "data(\"C_IDENT\") != null",
         "_row_num": 10
       },
       {
@@ -167,6 +172,7 @@
             }
           }
         },
+        "constraint": "data(\"C_DATAC\") != null || data('C_IDENT') != '1'",
         "_row_num": 14
       },
       {
@@ -212,10 +218,11 @@
           "prompt": {
             "text": {
               "english": "Numero mensal no livro",
-              "default": "Numero mensal no livro"
+              "default": "Numero mensal no livro (Se sem numero: \"9999\")"
             }
           }
         },
+        "constraint": "data('C_NMENSAL') != null || data('C_IDENT') != '1' || data(\"C_CS\")=='4'",
         "_row_num": 19
       },
       {
@@ -238,6 +245,7 @@
             }
           }
         },
+        "constraint": "data('C_SYMPTOMS') != null || data('C_IDENT') != '1'",
         "_row_num": 23
       },
       {
@@ -252,6 +260,7 @@
             }
           }
         },
+        "constraint": "data('C_SYMPTOUTR') != null || data('C_IDENT') != '1'",
         "_row_num": 25
       },
       {
@@ -270,6 +279,7 @@
             }
           }
         },
+        "constraint": "data(\"C_SYMPTQUAIS\") != null || data('C_SYMPTOUTR') != '1'",
         "_row_num": 28
       },
       {
@@ -296,6 +306,7 @@
             }
           }
         },
+        "constraint": "data(\"C_TEST\") != null || data('C_IDENT') != '1'",
         "_row_num": 32
       },
       {
@@ -315,6 +326,7 @@
             }
           }
         },
+        "constraint": "data(\"C_TEST1Q\") != null || data('C_TEST') != '1'",
         "_row_num": 34
       },
       {
@@ -341,7 +353,7 @@
       },
       {
         "clause": "if",
-        "condition": "data('C_TEST1Q') == '1'||data('C_TEST1Q') == '2'||data('C_TEST1Q') == '5'",
+        "condition": "data('C_TEST1Q') == '1'||data('C_TEST1Q') == '2'||data('C_TEST1Q') == '5'||data('C_TEST1Q') == '6'",
         "_row_num": 38
       },
       {
@@ -356,6 +368,7 @@
             }
           }
         },
+        "constraint": "data(\"C_TEST1RESC\")!=null || data('C_TEST1Q') == '3'||data('C_TEST1Q') == '4'||data('C_TEST1Q') == '8' || data('C_TEST1Q') == null",
         "_row_num": 39
       },
       {
@@ -378,6 +391,7 @@
             }
           }
         },
+        "constraint": "data(\"C_TEST1RES\")!=null || data('C_TEST1Q') == '1'||data('C_TEST1Q') == '2'||data('C_TEST1Q') == '5' || data('C_TEST1Q') == '6' || data('C_TEST1Q') == null",
         "_row_num": 42
       },
       {
@@ -413,6 +427,7 @@
             }
           }
         },
+        "constraint": "data('C_TEST') != '1' || data('C_TEST2') !=  null",
         "_row_num": 48
       },
       {
@@ -432,6 +447,7 @@
             }
           }
         },
+        "constraint": "data('C_TEST2') != '1' || data('C_TEST2Q') !=  null",
         "_row_num": 50
       },
       {
@@ -450,6 +466,7 @@
             }
           }
         },
+        "constraint": "data('C_TEST2Q') != '8' || data('C_TEST2QOUT') !=  null",
         "_row_num": 52
       },
       {
@@ -458,7 +475,7 @@
       },
       {
         "clause": "if",
-        "condition": "data('C_TEST2Q') == '1'||data('C_TEST2Q') == '2'||data('C_TEST2Q') == '5'",
+        "condition": "data('C_TEST2Q') == '1'||data('C_TEST2Q') == '2'||data('C_TEST2Q') == '5'||data('C_TEST2Q') == '6'",
         "_row_num": 54
       },
       {
@@ -473,6 +490,7 @@
             }
           }
         },
+        "constraint": "data(\"C_TEST2RESC\")!=null || data('C_TEST2Q') == '3'||data('C_TEST2Q') == '4'||data('C_TEST2Q') == '8' || data('C_TEST2Q') == null",
         "_row_num": 55
       },
       {
@@ -495,6 +513,7 @@
             }
           }
         },
+        "constraint": "data(\"C_TEST2RES\")!=null || data('C_TEST2Q') == '1'||data('C_TEST2Q') == '2'||data('C_TEST2Q') == '5' || data('C_TEST2Q') == '6' || data('C_TEST2Q') == null",
         "_row_num": 58
       },
       {
@@ -534,6 +553,7 @@
             }
           }
         },
+        "constraint": "data('C_TEST2') != '1' || data('C_TEST3') !=  null",
         "_row_num": 65
       },
       {
@@ -553,6 +573,7 @@
             }
           }
         },
+        "constraint": "data('C_TEST3') != '1' || data('C_TEST3Q') !=  null",
         "_row_num": 67
       },
       {
@@ -571,6 +592,7 @@
             }
           }
         },
+        "constraint": "data('C_TEST3Q') != '8' || data('C_TEST3QOUT') !=  null",
         "_row_num": 69
       },
       {
@@ -579,7 +601,7 @@
       },
       {
         "clause": "if",
-        "condition": "data('C_TEST3Q') == '1'||data('C_TEST3Q') == '2'||data('C_TEST3Q') == '5'",
+        "condition": "data('C_TEST3Q') == '1'||data('C_TEST3Q') == '2'||data('C_TEST3Q') == '5'||data('C_TEST3Q') == '6'",
         "_row_num": 71
       },
       {
@@ -594,6 +616,7 @@
             }
           }
         },
+        "constraint": "data(\"C_TEST3RESC\")!=null || data('C_TEST3Q') == '3'||data('C_TEST3Q') == '4'||data('C_TEST3Q') == '8' || data('C_TEST3Q') == null",
         "_row_num": 72
       },
       {
@@ -616,6 +639,7 @@
             }
           }
         },
+        "constraint": "data(\"C_TEST3RES\")!=null || data('C_TEST3Q') == '1'||data('C_TEST3Q') == '2'||data('C_TEST3Q') == '5' || data('C_TEST3Q') == '6' || data('C_TEST3Q') == null",
         "_row_num": 75
       },
       {
@@ -650,6 +674,7 @@
             }
           }
         },
+        "constraint": "data('C_DIAGN1') != null || data('C_IDENT') != '1'",
         "_row_num": 81
       },
       {
@@ -699,6 +724,7 @@
             }
           }
         },
+        "constraint": "data('C_DIAGN2') != null || data('C_DIAGN1') == null  || data('C_DIAGN1') == '0'",
         "_row_num": 89
       },
       {
@@ -752,6 +778,7 @@
             }
           }
         },
+        "constraint": "data('C_DIAGN3') != null || data('C_DIAGN2') == '0'  || data('C_DIAGN2') == null",
         "_row_num": 97
       },
       {
@@ -800,6 +827,7 @@
             }
           }
         },
+        "constraint": "data('C_TRATAMENT1') != null || data('C_IDENT') != '1'",
         "_row_num": 104
       },
       {
@@ -849,6 +877,7 @@
             }
           }
         },
+        "constraint": "data('C_TRATAMENT2') != null || data('C_TRATAMENT1') == '0' || data('C_IDENT') != '1'",
         "_row_num": 111
       },
       {
@@ -902,6 +931,7 @@
             }
           }
         },
+        "constraint": "data('C_TRATAMENT3') != null || data('C_TRATAMENT2') == null || data('C_TRATAMENT2') ==  '0'",
         "_row_num": 119
       },
       {
@@ -955,6 +985,7 @@
             }
           }
         },
+        "constraint": "data('C_TRATAMENT4') != null || data('C_TRATAMENT3') == '0'  ||  data('C_TRATAMENT2') == null",
         "_row_num": 127
       },
       {
@@ -1008,6 +1039,7 @@
             }
           }
         },
+        "constraint": "data('C_TRATAMENT5') != null || data('C_TRATAMENT4') == '0'   || data('C_TRATAMENT4') ==null",
         "_row_num": 136
       },
       {
@@ -1061,6 +1093,7 @@
             }
           }
         },
+        "constraint": "data('C_TRATAMENT6') != null || data('C_TRATAMENT5') == '0'  || data('C_TRATAMENT5') == null",
         "_row_num": 144
       },
       {
@@ -1114,6 +1147,7 @@
             }
           }
         },
+        "constraint": "data('C_TRATAMENT7') != null || data('C_TRATAMENT6') == '0'  || data('C_TRATAMENT6') ==  null",
         "_row_num": 152
       },
       {
@@ -1143,8 +1177,12 @@
         "_row_num": 156
       },
       {
-        "clause": "begin screen",
+        "clause": "end if",
         "_row_num": 157
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 158
       },
       {
         "type": "select_one",
@@ -1158,12 +1196,13 @@
             }
           }
         },
-        "_row_num": 158
+        "constraint": "data('C_PROCE') != null  | data('C_IDENT')!='1'",
+        "_row_num": 159
       },
       {
         "clause": "if",
         "condition": "data('C_PROCE')=='1'",
-        "_row_num": 159
+        "_row_num": 160
       },
       {
         "type": "text",
@@ -1176,18 +1215,15 @@
             }
           }
         },
-        "_row_num": 160
-      },
-      {
-        "clause": "end if",
+        "constraint": "data('C_PROCE_Q') != null  || data('C_PROCE') != '1'",
         "_row_num": 161
       },
       {
-        "clause": "end screen",
+        "clause": "end if",
         "_row_num": 162
       },
       {
-        "clause": "end if",
+        "clause": "end screen",
         "_row_num": 163
       },
       {
@@ -1315,6 +1351,19 @@
       },
       {
         "choice_list_name": "TestType",
+        "data_value": "6",
+        "display": {
+          "title": {
+            "text": {
+              "english": "COVID-19",
+              "default": "COVID-19"
+            }
+          }
+        },
+        "_row_num": 12
+      },
+      {
+        "choice_list_name": "TestType",
         "data_value": "8",
         "display": {
           "title": {
@@ -1324,7 +1373,7 @@
             }
           }
         },
-        "_row_num": 12
+        "_row_num": 13
       },
       {
         "choice_list_name": "TestResult",
@@ -1337,7 +1386,7 @@
             }
           }
         },
-        "_row_num": 14
+        "_row_num": 15
       },
       {
         "choice_list_name": "TestResult",
@@ -1350,7 +1399,7 @@
             }
           }
         },
-        "_row_num": 15
+        "_row_num": 16
       },
       {
         "choice_list_name": "TestResult",
@@ -1363,7 +1412,7 @@
             }
           }
         },
-        "_row_num": 16
+        "_row_num": 17
       },
       {
         "choice_list_name": "Symptoms",
@@ -1376,7 +1425,7 @@
             }
           }
         },
-        "_row_num": 19
+        "_row_num": 20
       },
       {
         "choice_list_name": "Symptoms",
@@ -1389,7 +1438,7 @@
             }
           }
         },
-        "_row_num": 20
+        "_row_num": 21
       },
       {
         "choice_list_name": "Symptoms",
@@ -1402,7 +1451,7 @@
             }
           }
         },
-        "_row_num": 21
+        "_row_num": 22
       },
       {
         "choice_list_name": "Symptoms",
@@ -1415,7 +1464,7 @@
             }
           }
         },
-        "_row_num": 22
+        "_row_num": 23
       },
       {
         "choice_list_name": "Symptoms",
@@ -1428,7 +1477,7 @@
             }
           }
         },
-        "_row_num": 23
+        "_row_num": 24
       },
       {
         "choice_list_name": "Symptoms",
@@ -1441,7 +1490,7 @@
             }
           }
         },
-        "_row_num": 24
+        "_row_num": 25
       },
       {
         "choice_list_name": "Symptoms",
@@ -1454,7 +1503,7 @@
             }
           }
         },
-        "_row_num": 25
+        "_row_num": 26
       },
       {
         "choice_list_name": "Symptoms",
@@ -1467,7 +1516,7 @@
             }
           }
         },
-        "_row_num": 26
+        "_row_num": 27
       },
       {
         "choice_list_name": "Symptoms",
@@ -1480,7 +1529,7 @@
             }
           }
         },
-        "_row_num": 27
+        "_row_num": 28
       },
       {
         "choice_list_name": "Symptoms",
@@ -1493,7 +1542,7 @@
             }
           }
         },
-        "_row_num": 28
+        "_row_num": 29
       },
       {
         "choice_list_name": "Symptoms",
@@ -1506,7 +1555,7 @@
             }
           }
         },
-        "_row_num": 29
+        "_row_num": 30
       },
       {
         "choice_list_name": "Symptoms",
@@ -1519,7 +1568,7 @@
             }
           }
         },
-        "_row_num": 30
+        "_row_num": 31
       },
       {
         "choice_list_name": "Symptoms",
@@ -1532,7 +1581,7 @@
             }
           }
         },
-        "_row_num": 31
+        "_row_num": 32
       },
       {
         "choice_list_name": "Symptoms",
@@ -1545,7 +1594,7 @@
             }
           }
         },
-        "_row_num": 32
+        "_row_num": 33
       },
       {
         "choice_list_name": "Symptoms",
@@ -1558,7 +1607,7 @@
             }
           }
         },
-        "_row_num": 33
+        "_row_num": 34
       },
       {
         "choice_list_name": "Symptoms",
@@ -1571,7 +1620,7 @@
             }
           }
         },
-        "_row_num": 34
+        "_row_num": 35
       },
       {
         "choice_list_name": "Symptoms",
@@ -1584,7 +1633,7 @@
             }
           }
         },
-        "_row_num": 35
+        "_row_num": 36
       },
       {
         "choice_list_name": "Symptoms",
@@ -1597,7 +1646,7 @@
             }
           }
         },
-        "_row_num": 36
+        "_row_num": 37
       },
       {
         "choice_list_name": "Symptoms",
@@ -1610,7 +1659,7 @@
             }
           }
         },
-        "_row_num": 37
+        "_row_num": 38
       },
       {
         "choice_list_name": "Symptoms",
@@ -1623,7 +1672,7 @@
             }
           }
         },
-        "_row_num": 38
+        "_row_num": 39
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1636,7 +1685,7 @@
             }
           }
         },
-        "_row_num": 40
+        "_row_num": 41
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1649,7 +1698,7 @@
             }
           }
         },
-        "_row_num": 41
+        "_row_num": 42
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1662,7 +1711,7 @@
             }
           }
         },
-        "_row_num": 42
+        "_row_num": 43
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1675,7 +1724,7 @@
             }
           }
         },
-        "_row_num": 43
+        "_row_num": 44
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1688,7 +1737,7 @@
             }
           }
         },
-        "_row_num": 44
+        "_row_num": 45
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1701,7 +1750,7 @@
             }
           }
         },
-        "_row_num": 45
+        "_row_num": 46
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1714,7 +1763,7 @@
             }
           }
         },
-        "_row_num": 46
+        "_row_num": 47
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1727,7 +1776,7 @@
             }
           }
         },
-        "_row_num": 47
+        "_row_num": 48
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1740,7 +1789,7 @@
             }
           }
         },
-        "_row_num": 48
+        "_row_num": 49
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1753,7 +1802,7 @@
             }
           }
         },
-        "_row_num": 49
+        "_row_num": 50
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1766,7 +1815,7 @@
             }
           }
         },
-        "_row_num": 50
+        "_row_num": 51
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1779,7 +1828,7 @@
             }
           }
         },
-        "_row_num": 51
+        "_row_num": 52
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1792,7 +1841,7 @@
             }
           }
         },
-        "_row_num": 52
+        "_row_num": 53
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1805,7 +1854,7 @@
             }
           }
         },
-        "_row_num": 53
+        "_row_num": 54
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1818,7 +1867,7 @@
             }
           }
         },
-        "_row_num": 54
+        "_row_num": 55
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1831,7 +1880,7 @@
             }
           }
         },
-        "_row_num": 55
+        "_row_num": 56
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1844,7 +1893,7 @@
             }
           }
         },
-        "_row_num": 56
+        "_row_num": 57
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1857,7 +1906,7 @@
             }
           }
         },
-        "_row_num": 57
+        "_row_num": 58
       },
       {
         "choice_list_name": "Diagnosis",
@@ -1870,7 +1919,7 @@
             }
           }
         },
-        "_row_num": 58
+        "_row_num": 59
       },
       {
         "choice_list_name": "Tratamento",
@@ -1883,7 +1932,7 @@
             }
           }
         },
-        "_row_num": 59
+        "_row_num": 60
       },
       {
         "choice_list_name": "Tratamento",
@@ -1896,7 +1945,7 @@
             }
           }
         },
-        "_row_num": 60
+        "_row_num": 61
       },
       {
         "choice_list_name": "Tratamento",
@@ -1909,7 +1958,7 @@
             }
           }
         },
-        "_row_num": 61
+        "_row_num": 62
       },
       {
         "choice_list_name": "Tratamento",
@@ -1922,7 +1971,7 @@
             }
           }
         },
-        "_row_num": 62
+        "_row_num": 63
       },
       {
         "choice_list_name": "Tratamento",
@@ -1935,7 +1984,7 @@
             }
           }
         },
-        "_row_num": 63
+        "_row_num": 64
       },
       {
         "choice_list_name": "Tratamento",
@@ -1948,7 +1997,7 @@
             }
           }
         },
-        "_row_num": 64
+        "_row_num": 65
       },
       {
         "choice_list_name": "Tratamento",
@@ -1961,7 +2010,7 @@
             }
           }
         },
-        "_row_num": 65
+        "_row_num": 66
       },
       {
         "choice_list_name": "Tratamento",
@@ -1974,7 +2023,7 @@
             }
           }
         },
-        "_row_num": 66
+        "_row_num": 67
       },
       {
         "choice_list_name": "Tratamento",
@@ -1987,7 +2036,7 @@
             }
           }
         },
-        "_row_num": 67
+        "_row_num": 68
       },
       {
         "choice_list_name": "Tratamento",
@@ -2000,7 +2049,7 @@
             }
           }
         },
-        "_row_num": 68
+        "_row_num": 69
       },
       {
         "choice_list_name": "Tratamento",
@@ -2013,7 +2062,7 @@
             }
           }
         },
-        "_row_num": 69
+        "_row_num": 70
       },
       {
         "choice_list_name": "Tratamento",
@@ -2026,7 +2075,7 @@
             }
           }
         },
-        "_row_num": 70
+        "_row_num": 71
       },
       {
         "choice_list_name": "Tratamento",
@@ -2039,7 +2088,7 @@
             }
           }
         },
-        "_row_num": 71
+        "_row_num": 72
       },
       {
         "choice_list_name": "Tratamento",
@@ -2052,7 +2101,7 @@
             }
           }
         },
-        "_row_num": 72
+        "_row_num": 73
       },
       {
         "choice_list_name": "Tratamento",
@@ -2065,7 +2114,7 @@
             }
           }
         },
-        "_row_num": 73
+        "_row_num": 74
       },
       {
         "choice_list_name": "Tratamento",
@@ -2078,7 +2127,7 @@
             }
           }
         },
-        "_row_num": 74
+        "_row_num": 75
       },
       {
         "choice_list_name": "Tratamento",
@@ -2091,7 +2140,7 @@
             }
           }
         },
-        "_row_num": 75
+        "_row_num": 76
       },
       {
         "choice_list_name": "Tratamento",
@@ -2104,7 +2153,7 @@
             }
           }
         },
-        "_row_num": 76
+        "_row_num": 77
       },
       {
         "choice_list_name": "Tratamento",
@@ -2117,7 +2166,7 @@
             }
           }
         },
-        "_row_num": 77
+        "_row_num": 78
       },
       {
         "choice_list_name": "Tratamento",
@@ -2130,7 +2179,7 @@
             }
           }
         },
-        "_row_num": 78
+        "_row_num": 79
       },
       {
         "choice_list_name": "Tratamento",
@@ -2143,7 +2192,7 @@
             }
           }
         },
-        "_row_num": 79
+        "_row_num": 80
       },
       {
         "choice_list_name": "Tratamento",
@@ -2156,7 +2205,7 @@
             }
           }
         },
-        "_row_num": 80
+        "_row_num": 81
       },
       {
         "choice_list_name": "Tratamento",
@@ -2169,7 +2218,7 @@
             }
           }
         },
-        "_row_num": 81
+        "_row_num": 82
       },
       {
         "choice_list_name": "Tratamento",
@@ -2182,7 +2231,7 @@
             }
           }
         },
-        "_row_num": 82
+        "_row_num": 83
       },
       {
         "choice_list_name": "Tratamento",
@@ -2195,7 +2244,7 @@
             }
           }
         },
-        "_row_num": 83
+        "_row_num": 84
       },
       {
         "choice_list_name": "Tratamento",
@@ -2208,7 +2257,7 @@
             }
           }
         },
-        "_row_num": 84
+        "_row_num": 85
       },
       {
         "choice_list_name": "Tratamento",
@@ -2221,7 +2270,7 @@
             }
           }
         },
-        "_row_num": 85
+        "_row_num": 86
       },
       {
         "choice_list_name": "Tratamento",
@@ -2234,7 +2283,7 @@
             }
           }
         },
-        "_row_num": 86
+        "_row_num": 87
       },
       {
         "choice_list_name": "Tratamento",
@@ -2247,7 +2296,7 @@
             }
           }
         },
-        "_row_num": 87
+        "_row_num": 88
       },
       {
         "choice_list_name": "Tratamento",
@@ -2260,7 +2309,7 @@
             }
           }
         },
-        "_row_num": 88
+        "_row_num": 89
       },
       {
         "choice_list_name": "Tratamento",
@@ -2273,7 +2322,7 @@
             }
           }
         },
-        "_row_num": 89
+        "_row_num": 90
       },
       {
         "choice_list_name": "Tratamento",
@@ -2286,7 +2335,7 @@
             }
           }
         },
-        "_row_num": 90
+        "_row_num": 91
       },
       {
         "choice_list_name": "Tratamento",
@@ -2299,7 +2348,7 @@
             }
           }
         },
-        "_row_num": 91
+        "_row_num": 92
       },
       {
         "choice_list_name": "Centro",
@@ -2312,7 +2361,7 @@
             }
           }
         },
-        "_row_num": 93
+        "_row_num": 94
       },
       {
         "choice_list_name": "Centro",
@@ -2325,7 +2374,20 @@
             }
           }
         },
-        "_row_num": 94
+        "_row_num": 95
+      },
+      {
+        "choice_list_name": "Centro",
+        "data_value": "4",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Outside facility",
+              "default": "Fora centro (greve)"
+            }
+          }
+        },
+        "_row_num": 96
       }
     ],
     "prompt_types": [
@@ -2878,6 +2940,19 @@
         },
         {
           "choice_list_name": "TestType",
+          "data_value": "6",
+          "display": {
+            "title": {
+              "text": {
+                "english": "COVID-19",
+                "default": "COVID-19"
+              }
+            }
+          },
+          "_row_num": 12
+        },
+        {
+          "choice_list_name": "TestType",
           "data_value": "8",
           "display": {
             "title": {
@@ -2887,7 +2962,7 @@
               }
             }
           },
-          "_row_num": 12
+          "_row_num": 13
         }
       ],
       "TestResult": [
@@ -2902,7 +2977,7 @@
               }
             }
           },
-          "_row_num": 14
+          "_row_num": 15
         },
         {
           "choice_list_name": "TestResult",
@@ -2915,7 +2990,7 @@
               }
             }
           },
-          "_row_num": 15
+          "_row_num": 16
         },
         {
           "choice_list_name": "TestResult",
@@ -2928,7 +3003,7 @@
               }
             }
           },
-          "_row_num": 16
+          "_row_num": 17
         }
       ],
       "Symptoms": [
@@ -2943,7 +3018,7 @@
               }
             }
           },
-          "_row_num": 19
+          "_row_num": 20
         },
         {
           "choice_list_name": "Symptoms",
@@ -2956,7 +3031,7 @@
               }
             }
           },
-          "_row_num": 20
+          "_row_num": 21
         },
         {
           "choice_list_name": "Symptoms",
@@ -2969,7 +3044,7 @@
               }
             }
           },
-          "_row_num": 21
+          "_row_num": 22
         },
         {
           "choice_list_name": "Symptoms",
@@ -2982,7 +3057,7 @@
               }
             }
           },
-          "_row_num": 22
+          "_row_num": 23
         },
         {
           "choice_list_name": "Symptoms",
@@ -2995,7 +3070,7 @@
               }
             }
           },
-          "_row_num": 23
+          "_row_num": 24
         },
         {
           "choice_list_name": "Symptoms",
@@ -3008,7 +3083,7 @@
               }
             }
           },
-          "_row_num": 24
+          "_row_num": 25
         },
         {
           "choice_list_name": "Symptoms",
@@ -3021,7 +3096,7 @@
               }
             }
           },
-          "_row_num": 25
+          "_row_num": 26
         },
         {
           "choice_list_name": "Symptoms",
@@ -3034,7 +3109,7 @@
               }
             }
           },
-          "_row_num": 26
+          "_row_num": 27
         },
         {
           "choice_list_name": "Symptoms",
@@ -3047,7 +3122,7 @@
               }
             }
           },
-          "_row_num": 27
+          "_row_num": 28
         },
         {
           "choice_list_name": "Symptoms",
@@ -3060,7 +3135,7 @@
               }
             }
           },
-          "_row_num": 28
+          "_row_num": 29
         },
         {
           "choice_list_name": "Symptoms",
@@ -3073,7 +3148,7 @@
               }
             }
           },
-          "_row_num": 29
+          "_row_num": 30
         },
         {
           "choice_list_name": "Symptoms",
@@ -3086,7 +3161,7 @@
               }
             }
           },
-          "_row_num": 30
+          "_row_num": 31
         },
         {
           "choice_list_name": "Symptoms",
@@ -3099,7 +3174,7 @@
               }
             }
           },
-          "_row_num": 31
+          "_row_num": 32
         },
         {
           "choice_list_name": "Symptoms",
@@ -3112,7 +3187,7 @@
               }
             }
           },
-          "_row_num": 32
+          "_row_num": 33
         },
         {
           "choice_list_name": "Symptoms",
@@ -3125,7 +3200,7 @@
               }
             }
           },
-          "_row_num": 33
+          "_row_num": 34
         },
         {
           "choice_list_name": "Symptoms",
@@ -3138,7 +3213,7 @@
               }
             }
           },
-          "_row_num": 34
+          "_row_num": 35
         },
         {
           "choice_list_name": "Symptoms",
@@ -3151,7 +3226,7 @@
               }
             }
           },
-          "_row_num": 35
+          "_row_num": 36
         },
         {
           "choice_list_name": "Symptoms",
@@ -3164,7 +3239,7 @@
               }
             }
           },
-          "_row_num": 36
+          "_row_num": 37
         },
         {
           "choice_list_name": "Symptoms",
@@ -3177,7 +3252,7 @@
               }
             }
           },
-          "_row_num": 37
+          "_row_num": 38
         },
         {
           "choice_list_name": "Symptoms",
@@ -3190,7 +3265,7 @@
               }
             }
           },
-          "_row_num": 38
+          "_row_num": 39
         }
       ],
       "Diagnosis": [
@@ -3205,7 +3280,7 @@
               }
             }
           },
-          "_row_num": 40
+          "_row_num": 41
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3218,7 +3293,7 @@
               }
             }
           },
-          "_row_num": 41
+          "_row_num": 42
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3231,7 +3306,7 @@
               }
             }
           },
-          "_row_num": 42
+          "_row_num": 43
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3244,7 +3319,7 @@
               }
             }
           },
-          "_row_num": 43
+          "_row_num": 44
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3257,7 +3332,7 @@
               }
             }
           },
-          "_row_num": 44
+          "_row_num": 45
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3270,7 +3345,7 @@
               }
             }
           },
-          "_row_num": 45
+          "_row_num": 46
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3283,7 +3358,7 @@
               }
             }
           },
-          "_row_num": 46
+          "_row_num": 47
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3296,7 +3371,7 @@
               }
             }
           },
-          "_row_num": 47
+          "_row_num": 48
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3309,7 +3384,7 @@
               }
             }
           },
-          "_row_num": 48
+          "_row_num": 49
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3322,7 +3397,7 @@
               }
             }
           },
-          "_row_num": 49
+          "_row_num": 50
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3335,7 +3410,7 @@
               }
             }
           },
-          "_row_num": 50
+          "_row_num": 51
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3348,7 +3423,7 @@
               }
             }
           },
-          "_row_num": 51
+          "_row_num": 52
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3361,7 +3436,7 @@
               }
             }
           },
-          "_row_num": 52
+          "_row_num": 53
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3374,7 +3449,7 @@
               }
             }
           },
-          "_row_num": 53
+          "_row_num": 54
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3387,7 +3462,7 @@
               }
             }
           },
-          "_row_num": 54
+          "_row_num": 55
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3400,7 +3475,7 @@
               }
             }
           },
-          "_row_num": 55
+          "_row_num": 56
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3413,7 +3488,7 @@
               }
             }
           },
-          "_row_num": 56
+          "_row_num": 57
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3426,7 +3501,7 @@
               }
             }
           },
-          "_row_num": 57
+          "_row_num": 58
         },
         {
           "choice_list_name": "Diagnosis",
@@ -3439,7 +3514,7 @@
               }
             }
           },
-          "_row_num": 58
+          "_row_num": 59
         }
       ],
       "Tratamento": [
@@ -3454,7 +3529,7 @@
               }
             }
           },
-          "_row_num": 59
+          "_row_num": 60
         },
         {
           "choice_list_name": "Tratamento",
@@ -3467,7 +3542,7 @@
               }
             }
           },
-          "_row_num": 60
+          "_row_num": 61
         },
         {
           "choice_list_name": "Tratamento",
@@ -3480,7 +3555,7 @@
               }
             }
           },
-          "_row_num": 61
+          "_row_num": 62
         },
         {
           "choice_list_name": "Tratamento",
@@ -3493,7 +3568,7 @@
               }
             }
           },
-          "_row_num": 62
+          "_row_num": 63
         },
         {
           "choice_list_name": "Tratamento",
@@ -3506,7 +3581,7 @@
               }
             }
           },
-          "_row_num": 63
+          "_row_num": 64
         },
         {
           "choice_list_name": "Tratamento",
@@ -3519,7 +3594,7 @@
               }
             }
           },
-          "_row_num": 64
+          "_row_num": 65
         },
         {
           "choice_list_name": "Tratamento",
@@ -3532,7 +3607,7 @@
               }
             }
           },
-          "_row_num": 65
+          "_row_num": 66
         },
         {
           "choice_list_name": "Tratamento",
@@ -3545,7 +3620,7 @@
               }
             }
           },
-          "_row_num": 66
+          "_row_num": 67
         },
         {
           "choice_list_name": "Tratamento",
@@ -3558,7 +3633,7 @@
               }
             }
           },
-          "_row_num": 67
+          "_row_num": 68
         },
         {
           "choice_list_name": "Tratamento",
@@ -3571,7 +3646,7 @@
               }
             }
           },
-          "_row_num": 68
+          "_row_num": 69
         },
         {
           "choice_list_name": "Tratamento",
@@ -3584,7 +3659,7 @@
               }
             }
           },
-          "_row_num": 69
+          "_row_num": 70
         },
         {
           "choice_list_name": "Tratamento",
@@ -3597,7 +3672,7 @@
               }
             }
           },
-          "_row_num": 70
+          "_row_num": 71
         },
         {
           "choice_list_name": "Tratamento",
@@ -3610,7 +3685,7 @@
               }
             }
           },
-          "_row_num": 71
+          "_row_num": 72
         },
         {
           "choice_list_name": "Tratamento",
@@ -3623,7 +3698,7 @@
               }
             }
           },
-          "_row_num": 72
+          "_row_num": 73
         },
         {
           "choice_list_name": "Tratamento",
@@ -3636,7 +3711,7 @@
               }
             }
           },
-          "_row_num": 73
+          "_row_num": 74
         },
         {
           "choice_list_name": "Tratamento",
@@ -3649,7 +3724,7 @@
               }
             }
           },
-          "_row_num": 74
+          "_row_num": 75
         },
         {
           "choice_list_name": "Tratamento",
@@ -3662,7 +3737,7 @@
               }
             }
           },
-          "_row_num": 75
+          "_row_num": 76
         },
         {
           "choice_list_name": "Tratamento",
@@ -3675,7 +3750,7 @@
               }
             }
           },
-          "_row_num": 76
+          "_row_num": 77
         },
         {
           "choice_list_name": "Tratamento",
@@ -3688,7 +3763,7 @@
               }
             }
           },
-          "_row_num": 77
+          "_row_num": 78
         },
         {
           "choice_list_name": "Tratamento",
@@ -3701,7 +3776,7 @@
               }
             }
           },
-          "_row_num": 78
+          "_row_num": 79
         },
         {
           "choice_list_name": "Tratamento",
@@ -3714,7 +3789,7 @@
               }
             }
           },
-          "_row_num": 79
+          "_row_num": 80
         },
         {
           "choice_list_name": "Tratamento",
@@ -3727,7 +3802,7 @@
               }
             }
           },
-          "_row_num": 80
+          "_row_num": 81
         },
         {
           "choice_list_name": "Tratamento",
@@ -3740,7 +3815,7 @@
               }
             }
           },
-          "_row_num": 81
+          "_row_num": 82
         },
         {
           "choice_list_name": "Tratamento",
@@ -3753,7 +3828,7 @@
               }
             }
           },
-          "_row_num": 82
+          "_row_num": 83
         },
         {
           "choice_list_name": "Tratamento",
@@ -3766,7 +3841,7 @@
               }
             }
           },
-          "_row_num": 83
+          "_row_num": 84
         },
         {
           "choice_list_name": "Tratamento",
@@ -3779,7 +3854,7 @@
               }
             }
           },
-          "_row_num": 84
+          "_row_num": 85
         },
         {
           "choice_list_name": "Tratamento",
@@ -3792,7 +3867,7 @@
               }
             }
           },
-          "_row_num": 85
+          "_row_num": 86
         },
         {
           "choice_list_name": "Tratamento",
@@ -3805,7 +3880,7 @@
               }
             }
           },
-          "_row_num": 86
+          "_row_num": 87
         },
         {
           "choice_list_name": "Tratamento",
@@ -3818,7 +3893,7 @@
               }
             }
           },
-          "_row_num": 87
+          "_row_num": 88
         },
         {
           "choice_list_name": "Tratamento",
@@ -3831,7 +3906,7 @@
               }
             }
           },
-          "_row_num": 88
+          "_row_num": 89
         },
         {
           "choice_list_name": "Tratamento",
@@ -3844,7 +3919,7 @@
               }
             }
           },
-          "_row_num": 89
+          "_row_num": 90
         },
         {
           "choice_list_name": "Tratamento",
@@ -3857,7 +3932,7 @@
               }
             }
           },
-          "_row_num": 90
+          "_row_num": 91
         },
         {
           "choice_list_name": "Tratamento",
@@ -3870,7 +3945,7 @@
               }
             }
           },
-          "_row_num": 91
+          "_row_num": 92
         }
       ],
       "Centro": [
@@ -3885,7 +3960,7 @@
               }
             }
           },
-          "_row_num": 93
+          "_row_num": 94
         },
         {
           "choice_list_name": "Centro",
@@ -3898,7 +3973,20 @@
               }
             }
           },
-          "_row_num": 94
+          "_row_num": 95
+        },
+        {
+          "choice_list_name": "Centro",
+          "data_value": "4",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Outside facility",
+                "default": "Fora centro (greve)"
+              }
+            }
+          },
+          "_row_num": 96
         }
       ]
     },
@@ -4625,7 +4713,7 @@
         "valuesList": "YesNoUM",
         "_defn": [
           {
-            "_row_num": 158,
+            "_row_num": 159,
             "section_name": "survey"
           },
           {
@@ -4640,7 +4728,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 160,
+            "_row_num": 161,
             "section_name": "survey"
           },
           {
@@ -4706,6 +4794,7 @@
                 }
               }
             },
+            "constraint": "data(\"C_CS\") != null",
             "_row_num": 3,
             "__rowNum__": 2,
             "_token_type": "prompt",
@@ -4741,6 +4830,7 @@
                 }
               }
             },
+            "constraint": "data(\"C_DATE\") != null",
             "_row_num": 6,
             "__rowNum__": 5,
             "_token_type": "prompt",
@@ -4759,6 +4849,7 @@
                 }
               }
             },
+            "constraint": "data(\"C_NAME\") != null",
             "_row_num": 8,
             "__rowNum__": 7,
             "_token_type": "prompt",
@@ -4773,10 +4864,11 @@
               "prompt": {
                 "text": {
                   "english": "Numest; PC:",
-                  "default": "Numest; PC:"
+                  "default": "Numest; PC: (Se desconhecido \"9999\")"
                 }
               }
             },
+            "constraint": "data(\"C_NUMEST\") != null",
             "_row_num": 9,
             "__rowNum__": 8,
             "_token_type": "prompt",
@@ -4792,10 +4884,11 @@
               "prompt": {
                 "text": {
                   "english": "Identified in the consultation Book?",
-                  "default": "A pessoa foi identificada no livro de consulta?"
+                  "default": "A pessoa foi identificada no livro de consulta? (Temos infomacao de consulta)"
                 }
               }
             },
+            "constraint": "data(\"C_IDENT\") != null",
             "_row_num": 10,
             "__rowNum__": 9,
             "_token_type": "prompt",
@@ -4815,6 +4908,7 @@
                 }
               }
             },
+            "constraint": "data(\"C_DATAC\") != null || data('C_IDENT') != '1'",
             "_row_num": 14,
             "__rowNum__": 13,
             "_token_type": "prompt",
@@ -4866,10 +4960,11 @@
               "prompt": {
                 "text": {
                   "english": "Numero mensal no livro",
-                  "default": "Numero mensal no livro"
+                  "default": "Numero mensal no livro (Se sem numero: \"9999\")"
                 }
               }
             },
+            "constraint": "data('C_NMENSAL') != null || data('C_IDENT') != '1' || data(\"C_CS\")=='4'",
             "_row_num": 19,
             "__rowNum__": 18,
             "_token_type": "prompt",
@@ -4889,6 +4984,7 @@
                 }
               }
             },
+            "constraint": "data('C_SYMPTOMS') != null || data('C_IDENT') != '1'",
             "_row_num": 23,
             "__rowNum__": 22,
             "_token_type": "prompt",
@@ -4908,6 +5004,7 @@
                 }
               }
             },
+            "constraint": "data('C_SYMPTOUTR') != null || data('C_IDENT') != '1'",
             "_row_num": 25,
             "__rowNum__": 24,
             "_token_type": "prompt",
@@ -4926,6 +5023,7 @@
                 }
               }
             },
+            "constraint": "data(\"C_SYMPTQUAIS\") != null || data('C_SYMPTOUTR') != '1'",
             "_row_num": 28,
             "__rowNum__": 27,
             "_token_type": "prompt",
@@ -4945,6 +5043,7 @@
                 }
               }
             },
+            "constraint": "data(\"C_TEST\") != null || data('C_IDENT') != '1'",
             "_row_num": 32,
             "__rowNum__": 31,
             "_token_type": "prompt",
@@ -4964,6 +5063,7 @@
                 }
               }
             },
+            "constraint": "data(\"C_TEST1Q\") != null || data('C_TEST') != '1'",
             "_row_num": 34,
             "__rowNum__": 33,
             "_token_type": "prompt",
@@ -5001,6 +5101,7 @@
                 }
               }
             },
+            "constraint": "data(\"C_TEST1RESC\")!=null || data('C_TEST1Q') == '3'||data('C_TEST1Q') == '4'||data('C_TEST1Q') == '8' || data('C_TEST1Q') == null",
             "_row_num": 39,
             "__rowNum__": 38,
             "_token_type": "prompt",
@@ -5019,6 +5120,7 @@
                 }
               }
             },
+            "constraint": "data(\"C_TEST1RES\")!=null || data('C_TEST1Q') == '1'||data('C_TEST1Q') == '2'||data('C_TEST1Q') == '5' || data('C_TEST1Q') == '6' || data('C_TEST1Q') == null",
             "_row_num": 42,
             "__rowNum__": 41,
             "_token_type": "prompt",
@@ -5038,6 +5140,7 @@
                 }
               }
             },
+            "constraint": "data('C_TEST') != '1' || data('C_TEST2') !=  null",
             "_row_num": 48,
             "__rowNum__": 47,
             "_token_type": "prompt",
@@ -5057,6 +5160,7 @@
                 }
               }
             },
+            "constraint": "data('C_TEST2') != '1' || data('C_TEST2Q') !=  null",
             "_row_num": 50,
             "__rowNum__": 49,
             "_token_type": "prompt",
@@ -5075,6 +5179,7 @@
                 }
               }
             },
+            "constraint": "data('C_TEST2Q') != '8' || data('C_TEST2QOUT') !=  null",
             "_row_num": 52,
             "__rowNum__": 51,
             "_token_type": "prompt",
@@ -5094,6 +5199,7 @@
                 }
               }
             },
+            "constraint": "data(\"C_TEST2RESC\")!=null || data('C_TEST2Q') == '3'||data('C_TEST2Q') == '4'||data('C_TEST2Q') == '8' || data('C_TEST2Q') == null",
             "_row_num": 55,
             "__rowNum__": 54,
             "_token_type": "prompt",
@@ -5112,6 +5218,7 @@
                 }
               }
             },
+            "constraint": "data(\"C_TEST2RES\")!=null || data('C_TEST2Q') == '1'||data('C_TEST2Q') == '2'||data('C_TEST2Q') == '5' || data('C_TEST2Q') == '6' || data('C_TEST2Q') == null",
             "_row_num": 58,
             "__rowNum__": 57,
             "_token_type": "prompt",
@@ -5131,6 +5238,7 @@
                 }
               }
             },
+            "constraint": "data('C_TEST2') != '1' || data('C_TEST3') !=  null",
             "_row_num": 65,
             "__rowNum__": 64,
             "_token_type": "prompt",
@@ -5150,6 +5258,7 @@
                 }
               }
             },
+            "constraint": "data('C_TEST3') != '1' || data('C_TEST3Q') !=  null",
             "_row_num": 67,
             "__rowNum__": 66,
             "_token_type": "prompt",
@@ -5168,6 +5277,7 @@
                 }
               }
             },
+            "constraint": "data('C_TEST3Q') != '8' || data('C_TEST3QOUT') !=  null",
             "_row_num": 69,
             "__rowNum__": 68,
             "_token_type": "prompt",
@@ -5187,6 +5297,7 @@
                 }
               }
             },
+            "constraint": "data(\"C_TEST3RESC\")!=null || data('C_TEST3Q') == '3'||data('C_TEST3Q') == '4'||data('C_TEST3Q') == '8' || data('C_TEST3Q') == null",
             "_row_num": 72,
             "__rowNum__": 71,
             "_token_type": "prompt",
@@ -5205,6 +5316,7 @@
                 }
               }
             },
+            "constraint": "data(\"C_TEST3RES\")!=null || data('C_TEST3Q') == '1'||data('C_TEST3Q') == '2'||data('C_TEST3Q') == '5' || data('C_TEST3Q') == '6' || data('C_TEST3Q') == null",
             "_row_num": 75,
             "__rowNum__": 74,
             "_token_type": "prompt",
@@ -5224,6 +5336,7 @@
                 }
               }
             },
+            "constraint": "data('C_DIAGN1') != null || data('C_IDENT') != '1'",
             "_row_num": 81,
             "__rowNum__": 80,
             "_token_type": "prompt",
@@ -5261,6 +5374,7 @@
                 }
               }
             },
+            "constraint": "data('C_DIAGN2') != null || data('C_DIAGN1') == null  || data('C_DIAGN1') == '0'",
             "_row_num": 89,
             "__rowNum__": 88,
             "_token_type": "prompt",
@@ -5298,6 +5412,7 @@
                 }
               }
             },
+            "constraint": "data('C_DIAGN3') != null || data('C_DIAGN2') == '0'  || data('C_DIAGN2') == null",
             "_row_num": 97,
             "__rowNum__": 96,
             "_token_type": "prompt",
@@ -5335,6 +5450,7 @@
                 }
               }
             },
+            "constraint": "data('C_TRATAMENT1') != null || data('C_IDENT') != '1'",
             "_row_num": 104,
             "__rowNum__": 103,
             "_token_type": "prompt",
@@ -5372,6 +5488,7 @@
                 }
               }
             },
+            "constraint": "data('C_TRATAMENT2') != null || data('C_TRATAMENT1') == '0' || data('C_IDENT') != '1'",
             "_row_num": 111,
             "__rowNum__": 110,
             "_token_type": "prompt",
@@ -5409,6 +5526,7 @@
                 }
               }
             },
+            "constraint": "data('C_TRATAMENT3') != null || data('C_TRATAMENT2') == null || data('C_TRATAMENT2') ==  '0'",
             "_row_num": 119,
             "__rowNum__": 118,
             "_token_type": "prompt",
@@ -5446,6 +5564,7 @@
                 }
               }
             },
+            "constraint": "data('C_TRATAMENT4') != null || data('C_TRATAMENT3') == '0'  ||  data('C_TRATAMENT2') == null",
             "_row_num": 127,
             "__rowNum__": 126,
             "_token_type": "prompt",
@@ -5483,6 +5602,7 @@
                 }
               }
             },
+            "constraint": "data('C_TRATAMENT5') != null || data('C_TRATAMENT4') == '0'   || data('C_TRATAMENT4') ==null",
             "_row_num": 136,
             "__rowNum__": 135,
             "_token_type": "prompt",
@@ -5520,6 +5640,7 @@
                 }
               }
             },
+            "constraint": "data('C_TRATAMENT6') != null || data('C_TRATAMENT5') == '0'  || data('C_TRATAMENT5') == null",
             "_row_num": 144,
             "__rowNum__": 143,
             "_token_type": "prompt",
@@ -5557,6 +5678,7 @@
                 }
               }
             },
+            "constraint": "data('C_TRATAMENT7') != null || data('C_TRATAMENT6') == '0'  || data('C_TRATAMENT6') ==  null",
             "_row_num": 152,
             "__rowNum__": 151,
             "_token_type": "prompt",
@@ -5594,11 +5716,12 @@
                 }
               }
             },
-            "_row_num": 158,
-            "__rowNum__": 157,
+            "constraint": "data('C_PROCE') != null  | data('C_IDENT')!='1'",
+            "_row_num": 159,
+            "__rowNum__": 158,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen157",
+            "_branch_label_enclosing_screen": "survey/_screen158",
             "promptIdx": 48
           },
           {
@@ -5612,11 +5735,12 @@
                 }
               }
             },
-            "_row_num": 160,
-            "__rowNum__": 159,
+            "constraint": "data('C_PROCE_Q') != null  || data('C_PROCE') != '1'",
+            "_row_num": 161,
+            "__rowNum__": 160,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "survey/_screen157",
+            "_branch_label_enclosing_screen": "survey/_screen158",
             "promptIdx": 49
           },
           {
@@ -5629,7 +5753,44 @@
           }
         ],
         "validation_tag_map": {
-          "finalize": []
+          "finalize": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            49
+          ]
         },
         "operations": [
           {
@@ -5701,7 +5862,7 @@
               "__rowNum__": 44,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\nif (data('C_TEST') == '1') {\nactivePromptIndicies.push(14);\nif (data('C_TEST1Q') == '8') {\nactivePromptIndicies.push(15);\n}\nif (data('C_TEST1Q') == '1'||data('C_TEST1Q') == '2'||data('C_TEST1Q') == '5') {\nactivePromptIndicies.push(16);\n}\nif (data('C_TEST1Q') == '3'||data('C_TEST1Q') == '4'||data('C_TEST1Q') == '8') {\nactivePromptIndicies.push(17);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\nif (data('C_TEST') == '1') {\nactivePromptIndicies.push(14);\nif (data('C_TEST1Q') == '8') {\nactivePromptIndicies.push(15);\n}\nif (data('C_TEST1Q') == '1'||data('C_TEST1Q') == '2'||data('C_TEST1Q') == '5'||data('C_TEST1Q') == '6') {\nactivePromptIndicies.push(16);\n}\nif (data('C_TEST1Q') == '3'||data('C_TEST1Q') == '4'||data('C_TEST1Q') == '8') {\nactivePromptIndicies.push(17);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 5
           },
           {
@@ -5731,7 +5892,7 @@
               "__rowNum__": 60,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\nif (data('C_TEST2') == '1') {\nactivePromptIndicies.push(19);\nif (data('C_TEST2Q') == '8') {\nactivePromptIndicies.push(20);\n}\nif (data('C_TEST2Q') == '1'||data('C_TEST2Q') == '2'||data('C_TEST2Q') == '5') {\nactivePromptIndicies.push(21);\n}\nif (data('C_TEST2Q') == '3'||data('C_TEST2Q') == '4'||data('C_TEST2Q') == '8') {\nactivePromptIndicies.push(22);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\nif (data('C_TEST2') == '1') {\nactivePromptIndicies.push(19);\nif (data('C_TEST2Q') == '8') {\nactivePromptIndicies.push(20);\n}\nif (data('C_TEST2Q') == '1'||data('C_TEST2Q') == '2'||data('C_TEST2Q') == '5'||data('C_TEST2Q') == '6') {\nactivePromptIndicies.push(21);\n}\nif (data('C_TEST2Q') == '3'||data('C_TEST2Q') == '4'||data('C_TEST2Q') == '8') {\nactivePromptIndicies.push(22);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 8
           },
           {
@@ -5768,7 +5929,7 @@
               "__rowNum__": 77,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(23);\nif (data('C_TEST3') == '1') {\nactivePromptIndicies.push(24);\nif (data('C_TEST3Q') == '8') {\nactivePromptIndicies.push(25);\n}\nif (data('C_TEST3Q') == '1'||data('C_TEST3Q') == '2'||data('C_TEST3Q') == '5') {\nactivePromptIndicies.push(26);\n}\nif (data('C_TEST3Q') == '3'||data('C_TEST3Q') == '4'||data('C_TEST3Q') == '8') {\nactivePromptIndicies.push(27);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(23);\nif (data('C_TEST3') == '1') {\nactivePromptIndicies.push(24);\nif (data('C_TEST3Q') == '8') {\nactivePromptIndicies.push(25);\n}\nif (data('C_TEST3Q') == '1'||data('C_TEST3Q') == '2'||data('C_TEST3Q') == '5'||data('C_TEST3Q') == '6') {\nactivePromptIndicies.push(26);\n}\nif (data('C_TEST3Q') == '3'||data('C_TEST3Q') == '4'||data('C_TEST3Q') == '8') {\nactivePromptIndicies.push(27);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 12
           },
           {
@@ -6077,8 +6238,8 @@
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else163",
-            "_row_num": 163,
+            "_branch_label": "_else157",
+            "_row_num": 157,
             "operationIdx": 45
           },
           {
@@ -6096,24 +6257,24 @@
             "operationIdx": 46
           },
           {
-            "clause": "begin screen",
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif157",
             "_row_num": 157,
-            "__rowNum__": 156,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 162,
-              "__rowNum__": 161,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(48);\nif (data('C_PROCE')=='1') {\nactivePromptIndicies.push(49);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 47
           },
           {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_endif163",
-            "_row_num": 163,
+            "clause": "begin screen",
+            "_row_num": 158,
+            "__rowNum__": 157,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 163,
+              "__rowNum__": 162,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(48);\nif (data('C_PROCE')=='1') {\nactivePromptIndicies.push(49);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 48
           },
           {
@@ -6191,9 +6352,9 @@
           "_endif149": 44,
           "_then150": 46,
           "_screen151": 46,
-          "_screen157": 47,
-          "_else163": 49,
-          "_endif163": 49,
+          "_else157": 48,
+          "_endif157": 48,
+          "_screen158": 48,
           "_else164": 50,
           "_endif164": 50,
           "_contents": 51,
@@ -7241,7 +7402,7 @@
         "valuesList": "YesNoUM",
         "_defn": [
           {
-            "_row_num": 158,
+            "_row_num": 159,
             "section_name": "survey"
           },
           {
@@ -7259,7 +7420,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 160,
+            "_row_num": 161,
             "section_name": "survey"
           },
           {
@@ -7445,7 +7606,7 @@
         "_aspect": "C_CS",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Centro\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":93},{\"choice_list_name\":\"Centro\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum\",\"default\":\"CS Cuntum\"}}},\"_row_num\":94}]"
+        "_value": "[{\"choice_list_name\":\"Centro\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Bandim\",\"default\":\"CS Bandim\"}}},\"_row_num\":94},{\"choice_list_name\":\"Centro\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"CS Cuntum\",\"default\":\"CS Cuntum\"}}},\"_row_num\":95},{\"choice_list_name\":\"Centro\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Outside facility\",\"default\":\"Fora centro (greve)\"}}},\"_row_num\":96}]"
       },
       {
         "_partition": "Column",
@@ -7459,21 +7620,21 @@
         "_aspect": "C_DIAGN1",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paludismo\",\"default\":\"Paludismo\"}}},\"_row_num\":40},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Gripe - Cataro comum\",\"default\":\"Gripe - Cataro comum\"}}},\"_row_num\":41},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Pneumonia\",\"default\":\"Pneumonia\"}}},\"_row_num\":42},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"COVID-19\",\"default\":\"COVID-19\"}}},\"_row_num\":43},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"TB\",\"default\":\"TB\"}}},\"_row_num\":44},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"HIV\",\"default\":\"HIV\"}}},\"_row_num\":45},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Hepatitis\",\"default\":\"Hepatitis\"}}},\"_row_num\":46},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Gastroenterite\",\"default\":\"Gastroenterite\"}}},\"_row_num\":47},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Sindrome cefalagico (Dor de cabeca)\",\"default\":\"Sindrome cefalagico (Dor de cabeca)\"}}},\"_row_num\":48},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Diabetes\",\"default\":\"Diabetes\"}}},\"_row_num\":49},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Hipertensao (tensao alta)\",\"default\":\"Hipertensao (tensao alta)\"}}},\"_row_num\":50},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Hipotensao (tensao baixo)\",\"default\":\"Hipotensao (tensao baixo)\"}}},\"_row_num\":51},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Sindrome febril\",\"default\":\"Sindrome febril\"}}},\"_row_num\":52},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Traumatismo\",\"default\":\"Traumatismo (lesoes corporais)\"}}},\"_row_num\":53},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Gastritis / Ulcera gastroduodenal\",\"default\":\"Gastritis / Ulcera gastroduodenal\"}}},\"_row_num\":54},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Febre Tifoide\",\"default\":\"Febre Tifoide\"}}},\"_row_num\":55},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Infeccao urinaria\",\"default\":\"Infeccao urinaria\"}}},\"_row_num\":56},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":57},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":58}]"
+        "_value": "[{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paludismo\",\"default\":\"Paludismo\"}}},\"_row_num\":41},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Gripe - Cataro comum\",\"default\":\"Gripe - Cataro comum\"}}},\"_row_num\":42},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Pneumonia\",\"default\":\"Pneumonia\"}}},\"_row_num\":43},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"COVID-19\",\"default\":\"COVID-19\"}}},\"_row_num\":44},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"TB\",\"default\":\"TB\"}}},\"_row_num\":45},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"HIV\",\"default\":\"HIV\"}}},\"_row_num\":46},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Hepatitis\",\"default\":\"Hepatitis\"}}},\"_row_num\":47},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Gastroenterite\",\"default\":\"Gastroenterite\"}}},\"_row_num\":48},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Sindrome cefalagico (Dor de cabeca)\",\"default\":\"Sindrome cefalagico (Dor de cabeca)\"}}},\"_row_num\":49},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Diabetes\",\"default\":\"Diabetes\"}}},\"_row_num\":50},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Hipertensao (tensao alta)\",\"default\":\"Hipertensao (tensao alta)\"}}},\"_row_num\":51},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Hipotensao (tensao baixo)\",\"default\":\"Hipotensao (tensao baixo)\"}}},\"_row_num\":52},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Sindrome febril\",\"default\":\"Sindrome febril\"}}},\"_row_num\":53},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Traumatismo\",\"default\":\"Traumatismo (lesoes corporais)\"}}},\"_row_num\":54},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Gastritis / Ulcera gastroduodenal\",\"default\":\"Gastritis / Ulcera gastroduodenal\"}}},\"_row_num\":55},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Febre Tifoide\",\"default\":\"Febre Tifoide\"}}},\"_row_num\":56},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Infeccao urinaria\",\"default\":\"Infeccao urinaria\"}}},\"_row_num\":57},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":58},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":59}]"
       },
       {
         "_partition": "Column",
         "_aspect": "C_DIAGN2",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paludismo\",\"default\":\"Paludismo\"}}},\"_row_num\":40},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Gripe - Cataro comum\",\"default\":\"Gripe - Cataro comum\"}}},\"_row_num\":41},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Pneumonia\",\"default\":\"Pneumonia\"}}},\"_row_num\":42},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"COVID-19\",\"default\":\"COVID-19\"}}},\"_row_num\":43},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"TB\",\"default\":\"TB\"}}},\"_row_num\":44},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"HIV\",\"default\":\"HIV\"}}},\"_row_num\":45},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Hepatitis\",\"default\":\"Hepatitis\"}}},\"_row_num\":46},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Gastroenterite\",\"default\":\"Gastroenterite\"}}},\"_row_num\":47},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Sindrome cefalagico (Dor de cabeca)\",\"default\":\"Sindrome cefalagico (Dor de cabeca)\"}}},\"_row_num\":48},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Diabetes\",\"default\":\"Diabetes\"}}},\"_row_num\":49},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Hipertensao (tensao alta)\",\"default\":\"Hipertensao (tensao alta)\"}}},\"_row_num\":50},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Hipotensao (tensao baixo)\",\"default\":\"Hipotensao (tensao baixo)\"}}},\"_row_num\":51},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Sindrome febril\",\"default\":\"Sindrome febril\"}}},\"_row_num\":52},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Traumatismo\",\"default\":\"Traumatismo (lesoes corporais)\"}}},\"_row_num\":53},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Gastritis / Ulcera gastroduodenal\",\"default\":\"Gastritis / Ulcera gastroduodenal\"}}},\"_row_num\":54},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Febre Tifoide\",\"default\":\"Febre Tifoide\"}}},\"_row_num\":55},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Infeccao urinaria\",\"default\":\"Infeccao urinaria\"}}},\"_row_num\":56},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":57},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":58}]"
+        "_value": "[{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paludismo\",\"default\":\"Paludismo\"}}},\"_row_num\":41},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Gripe - Cataro comum\",\"default\":\"Gripe - Cataro comum\"}}},\"_row_num\":42},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Pneumonia\",\"default\":\"Pneumonia\"}}},\"_row_num\":43},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"COVID-19\",\"default\":\"COVID-19\"}}},\"_row_num\":44},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"TB\",\"default\":\"TB\"}}},\"_row_num\":45},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"HIV\",\"default\":\"HIV\"}}},\"_row_num\":46},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Hepatitis\",\"default\":\"Hepatitis\"}}},\"_row_num\":47},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Gastroenterite\",\"default\":\"Gastroenterite\"}}},\"_row_num\":48},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Sindrome cefalagico (Dor de cabeca)\",\"default\":\"Sindrome cefalagico (Dor de cabeca)\"}}},\"_row_num\":49},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Diabetes\",\"default\":\"Diabetes\"}}},\"_row_num\":50},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Hipertensao (tensao alta)\",\"default\":\"Hipertensao (tensao alta)\"}}},\"_row_num\":51},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Hipotensao (tensao baixo)\",\"default\":\"Hipotensao (tensao baixo)\"}}},\"_row_num\":52},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Sindrome febril\",\"default\":\"Sindrome febril\"}}},\"_row_num\":53},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Traumatismo\",\"default\":\"Traumatismo (lesoes corporais)\"}}},\"_row_num\":54},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Gastritis / Ulcera gastroduodenal\",\"default\":\"Gastritis / Ulcera gastroduodenal\"}}},\"_row_num\":55},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Febre Tifoide\",\"default\":\"Febre Tifoide\"}}},\"_row_num\":56},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Infeccao urinaria\",\"default\":\"Infeccao urinaria\"}}},\"_row_num\":57},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":58},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":59}]"
       },
       {
         "_partition": "Column",
         "_aspect": "C_DIAGN3",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paludismo\",\"default\":\"Paludismo\"}}},\"_row_num\":40},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Gripe - Cataro comum\",\"default\":\"Gripe - Cataro comum\"}}},\"_row_num\":41},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Pneumonia\",\"default\":\"Pneumonia\"}}},\"_row_num\":42},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"COVID-19\",\"default\":\"COVID-19\"}}},\"_row_num\":43},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"TB\",\"default\":\"TB\"}}},\"_row_num\":44},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"HIV\",\"default\":\"HIV\"}}},\"_row_num\":45},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Hepatitis\",\"default\":\"Hepatitis\"}}},\"_row_num\":46},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Gastroenterite\",\"default\":\"Gastroenterite\"}}},\"_row_num\":47},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Sindrome cefalagico (Dor de cabeca)\",\"default\":\"Sindrome cefalagico (Dor de cabeca)\"}}},\"_row_num\":48},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Diabetes\",\"default\":\"Diabetes\"}}},\"_row_num\":49},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Hipertensao (tensao alta)\",\"default\":\"Hipertensao (tensao alta)\"}}},\"_row_num\":50},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Hipotensao (tensao baixo)\",\"default\":\"Hipotensao (tensao baixo)\"}}},\"_row_num\":51},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Sindrome febril\",\"default\":\"Sindrome febril\"}}},\"_row_num\":52},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Traumatismo\",\"default\":\"Traumatismo (lesoes corporais)\"}}},\"_row_num\":53},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Gastritis / Ulcera gastroduodenal\",\"default\":\"Gastritis / Ulcera gastroduodenal\"}}},\"_row_num\":54},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Febre Tifoide\",\"default\":\"Febre Tifoide\"}}},\"_row_num\":55},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Infeccao urinaria\",\"default\":\"Infeccao urinaria\"}}},\"_row_num\":56},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":57},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":58}]"
+        "_value": "[{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paludismo\",\"default\":\"Paludismo\"}}},\"_row_num\":41},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Gripe - Cataro comum\",\"default\":\"Gripe - Cataro comum\"}}},\"_row_num\":42},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Pneumonia\",\"default\":\"Pneumonia\"}}},\"_row_num\":43},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"COVID-19\",\"default\":\"COVID-19\"}}},\"_row_num\":44},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"TB\",\"default\":\"TB\"}}},\"_row_num\":45},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"HIV\",\"default\":\"HIV\"}}},\"_row_num\":46},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Hepatitis\",\"default\":\"Hepatitis\"}}},\"_row_num\":47},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Gastroenterite\",\"default\":\"Gastroenterite\"}}},\"_row_num\":48},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Sindrome cefalagico (Dor de cabeca)\",\"default\":\"Sindrome cefalagico (Dor de cabeca)\"}}},\"_row_num\":49},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Diabetes\",\"default\":\"Diabetes\"}}},\"_row_num\":50},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Hipertensao (tensao alta)\",\"default\":\"Hipertensao (tensao alta)\"}}},\"_row_num\":51},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Hipotensao (tensao baixo)\",\"default\":\"Hipotensao (tensao baixo)\"}}},\"_row_num\":52},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Sindrome febril\",\"default\":\"Sindrome febril\"}}},\"_row_num\":53},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Traumatismo\",\"default\":\"Traumatismo (lesoes corporais)\"}}},\"_row_num\":54},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Gastritis / Ulcera gastroduodenal\",\"default\":\"Gastritis / Ulcera gastroduodenal\"}}},\"_row_num\":55},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Febre Tifoide\",\"default\":\"Febre Tifoide\"}}},\"_row_num\":56},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Infeccao urinaria\",\"default\":\"Infeccao urinaria\"}}},\"_row_num\":57},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":58},{\"choice_list_name\":\"Diagnosis\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":59}]"
       },
       {
         "_partition": "Column",
@@ -7494,7 +7655,7 @@
         "_aspect": "C_SYMPTOMS",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Symptoms\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Febre\",\"default\":\"Febre\"}}},\"_row_num\":19},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Tosse\",\"default\":\"Tosse\"}}},\"_row_num\":20},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Falta de ar\",\"default\":\"Falta de ar\"}}},\"_row_num\":21},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Rinorreia\",\"default\":\"Rinorreia\"}}},\"_row_num\":22},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Dor de garganta\",\"default\":\"Dor de garganta\"}}},\"_row_num\":23},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Dor de Cabeca\",\"default\":\"Dor de Cabeca\"}}},\"_row_num\":24},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Dores abdominais\",\"default\":\"Dores abdominais (bariga)\"}}},\"_row_num\":25},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Diarreia\",\"default\":\"Diarreia\"}}},\"_row_num\":26},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Diarreia com sangue\",\"default\":\"Diarreia com sangue\"}}},\"_row_num\":27},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Vomito\",\"default\":\"Vomito\"}}},\"_row_num\":28},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Convulsao\",\"default\":\"Convulsao\"}}},\"_row_num\":29},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Myagia\",\"default\":\"Mialgia (dores de musculos)\"}}},\"_row_num\":30},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Caimbra\",\"default\":\"Caimbra\"}}},\"_row_num\":31},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Cansaco extremo (cansera)\",\"default\":\"Cansaco extremo (cansera)\"}}},\"_row_num\":32},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Perda de olfato(chero)\",\"default\":\"Perda de olfato(chero)\"}}},\"_row_num\":33},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Perda de paladar (gusto)\",\"default\":\"Perda de paladar (gusto)\"}}},\"_row_num\":34},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Paralisisia\",\"default\":\"Paralisia (dificuldade para caminhar)\"}}},\"_row_num\":35},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Escalafrio\",\"default\":\"Escalafrio\"}}},\"_row_num\":36},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Tontura\",\"default\":\"Tontura\"}}},\"_row_num\":37},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Anorexia\",\"default\":\"Anorexia (perda de apetite)\"}}},\"_row_num\":38}]"
+        "_value": "[{\"choice_list_name\":\"Symptoms\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Febre\",\"default\":\"Febre\"}}},\"_row_num\":20},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Tosse\",\"default\":\"Tosse\"}}},\"_row_num\":21},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Falta de ar\",\"default\":\"Falta de ar\"}}},\"_row_num\":22},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Rinorreia\",\"default\":\"Rinorreia\"}}},\"_row_num\":23},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Dor de garganta\",\"default\":\"Dor de garganta\"}}},\"_row_num\":24},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Dor de Cabeca\",\"default\":\"Dor de Cabeca\"}}},\"_row_num\":25},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Dores abdominais\",\"default\":\"Dores abdominais (bariga)\"}}},\"_row_num\":26},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Diarreia\",\"default\":\"Diarreia\"}}},\"_row_num\":27},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Diarreia com sangue\",\"default\":\"Diarreia com sangue\"}}},\"_row_num\":28},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Vomito\",\"default\":\"Vomito\"}}},\"_row_num\":29},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Convulsao\",\"default\":\"Convulsao\"}}},\"_row_num\":30},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Myagia\",\"default\":\"Mialgia (dores de musculos)\"}}},\"_row_num\":31},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Caimbra\",\"default\":\"Caimbra\"}}},\"_row_num\":32},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Cansaco extremo (cansera)\",\"default\":\"Cansaco extremo (cansera)\"}}},\"_row_num\":33},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Perda de olfato(chero)\",\"default\":\"Perda de olfato(chero)\"}}},\"_row_num\":34},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Perda de paladar (gusto)\",\"default\":\"Perda de paladar (gusto)\"}}},\"_row_num\":35},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Paralisisia\",\"default\":\"Paralisia (dificuldade para caminhar)\"}}},\"_row_num\":36},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Escalafrio\",\"default\":\"Escalafrio\"}}},\"_row_num\":37},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Tontura\",\"default\":\"Tontura\"}}},\"_row_num\":38},{\"choice_list_name\":\"Symptoms\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Anorexia\",\"default\":\"Anorexia (perda de apetite)\"}}},\"_row_num\":39}]"
       },
       {
         "_partition": "Column",
@@ -7515,14 +7676,14 @@
         "_aspect": "C_TEST1Q",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"TestType\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"TDR\",\"default\":\"TDR\"}}},\"_row_num\":7},{\"choice_list_name\":\"TestType\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"GE\",\"default\":\"GE\"}}},\"_row_num\":8},{\"choice_list_name\":\"TestType\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Leuco\",\"default\":\"Leuco\"}}},\"_row_num\":9},{\"choice_list_name\":\"TestType\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Hb\",\"default\":\"Hb\"}}},\"_row_num\":10},{\"choice_list_name\":\"TestType\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Vidal\",\"default\":\"Vidal\"}}},\"_row_num\":11},{\"choice_list_name\":\"TestType\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Other\",\"default\":\"Outro\"}}},\"_row_num\":12}]"
+        "_value": "[{\"choice_list_name\":\"TestType\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"TDR\",\"default\":\"TDR\"}}},\"_row_num\":7},{\"choice_list_name\":\"TestType\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"GE\",\"default\":\"GE\"}}},\"_row_num\":8},{\"choice_list_name\":\"TestType\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Leuco\",\"default\":\"Leuco\"}}},\"_row_num\":9},{\"choice_list_name\":\"TestType\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Hb\",\"default\":\"Hb\"}}},\"_row_num\":10},{\"choice_list_name\":\"TestType\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Vidal\",\"default\":\"Vidal\"}}},\"_row_num\":11},{\"choice_list_name\":\"TestType\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"COVID-19\",\"default\":\"COVID-19\"}}},\"_row_num\":12},{\"choice_list_name\":\"TestType\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Other\",\"default\":\"Outro\"}}},\"_row_num\":13}]"
       },
       {
         "_partition": "Column",
         "_aspect": "C_TEST1RESC",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"TestResult\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Positive\",\"default\":\"Positivo\"}}},\"_row_num\":14},{\"choice_list_name\":\"TestResult\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Negative\",\"default\":\"Negativo\"}}},\"_row_num\":15},{\"choice_list_name\":\"TestResult\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"No information recorded\",\"default\":\"Falta informacao na livro\"}}},\"_row_num\":16}]"
+        "_value": "[{\"choice_list_name\":\"TestResult\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Positive\",\"default\":\"Positivo\"}}},\"_row_num\":15},{\"choice_list_name\":\"TestResult\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Negative\",\"default\":\"Negativo\"}}},\"_row_num\":16},{\"choice_list_name\":\"TestResult\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"No information recorded\",\"default\":\"Falta informacao na livro\"}}},\"_row_num\":17}]"
       },
       {
         "_partition": "Column",
@@ -7536,14 +7697,14 @@
         "_aspect": "C_TEST2Q",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"TestType\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"TDR\",\"default\":\"TDR\"}}},\"_row_num\":7},{\"choice_list_name\":\"TestType\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"GE\",\"default\":\"GE\"}}},\"_row_num\":8},{\"choice_list_name\":\"TestType\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Leuco\",\"default\":\"Leuco\"}}},\"_row_num\":9},{\"choice_list_name\":\"TestType\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Hb\",\"default\":\"Hb\"}}},\"_row_num\":10},{\"choice_list_name\":\"TestType\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Vidal\",\"default\":\"Vidal\"}}},\"_row_num\":11},{\"choice_list_name\":\"TestType\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Other\",\"default\":\"Outro\"}}},\"_row_num\":12}]"
+        "_value": "[{\"choice_list_name\":\"TestType\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"TDR\",\"default\":\"TDR\"}}},\"_row_num\":7},{\"choice_list_name\":\"TestType\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"GE\",\"default\":\"GE\"}}},\"_row_num\":8},{\"choice_list_name\":\"TestType\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Leuco\",\"default\":\"Leuco\"}}},\"_row_num\":9},{\"choice_list_name\":\"TestType\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Hb\",\"default\":\"Hb\"}}},\"_row_num\":10},{\"choice_list_name\":\"TestType\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Vidal\",\"default\":\"Vidal\"}}},\"_row_num\":11},{\"choice_list_name\":\"TestType\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"COVID-19\",\"default\":\"COVID-19\"}}},\"_row_num\":12},{\"choice_list_name\":\"TestType\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Other\",\"default\":\"Outro\"}}},\"_row_num\":13}]"
       },
       {
         "_partition": "Column",
         "_aspect": "C_TEST2RESC",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"TestResult\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Positive\",\"default\":\"Positivo\"}}},\"_row_num\":14},{\"choice_list_name\":\"TestResult\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Negative\",\"default\":\"Negativo\"}}},\"_row_num\":15},{\"choice_list_name\":\"TestResult\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"No information recorded\",\"default\":\"Falta informacao na livro\"}}},\"_row_num\":16}]"
+        "_value": "[{\"choice_list_name\":\"TestResult\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Positive\",\"default\":\"Positivo\"}}},\"_row_num\":15},{\"choice_list_name\":\"TestResult\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Negative\",\"default\":\"Negativo\"}}},\"_row_num\":16},{\"choice_list_name\":\"TestResult\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"No information recorded\",\"default\":\"Falta informacao na livro\"}}},\"_row_num\":17}]"
       },
       {
         "_partition": "Column",
@@ -7557,63 +7718,63 @@
         "_aspect": "C_TEST3Q",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"TestType\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"TDR\",\"default\":\"TDR\"}}},\"_row_num\":7},{\"choice_list_name\":\"TestType\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"GE\",\"default\":\"GE\"}}},\"_row_num\":8},{\"choice_list_name\":\"TestType\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Leuco\",\"default\":\"Leuco\"}}},\"_row_num\":9},{\"choice_list_name\":\"TestType\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Hb\",\"default\":\"Hb\"}}},\"_row_num\":10},{\"choice_list_name\":\"TestType\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Vidal\",\"default\":\"Vidal\"}}},\"_row_num\":11},{\"choice_list_name\":\"TestType\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Other\",\"default\":\"Outro\"}}},\"_row_num\":12}]"
+        "_value": "[{\"choice_list_name\":\"TestType\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"TDR\",\"default\":\"TDR\"}}},\"_row_num\":7},{\"choice_list_name\":\"TestType\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"GE\",\"default\":\"GE\"}}},\"_row_num\":8},{\"choice_list_name\":\"TestType\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Leuco\",\"default\":\"Leuco\"}}},\"_row_num\":9},{\"choice_list_name\":\"TestType\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Hb\",\"default\":\"Hb\"}}},\"_row_num\":10},{\"choice_list_name\":\"TestType\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Vidal\",\"default\":\"Vidal\"}}},\"_row_num\":11},{\"choice_list_name\":\"TestType\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"COVID-19\",\"default\":\"COVID-19\"}}},\"_row_num\":12},{\"choice_list_name\":\"TestType\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Other\",\"default\":\"Outro\"}}},\"_row_num\":13}]"
       },
       {
         "_partition": "Column",
         "_aspect": "C_TEST3RESC",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"TestResult\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Positive\",\"default\":\"Positivo\"}}},\"_row_num\":14},{\"choice_list_name\":\"TestResult\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Negative\",\"default\":\"Negativo\"}}},\"_row_num\":15},{\"choice_list_name\":\"TestResult\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"No information recorded\",\"default\":\"Falta informacao na livro\"}}},\"_row_num\":16}]"
+        "_value": "[{\"choice_list_name\":\"TestResult\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Positive\",\"default\":\"Positivo\"}}},\"_row_num\":15},{\"choice_list_name\":\"TestResult\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Negative\",\"default\":\"Negativo\"}}},\"_row_num\":16},{\"choice_list_name\":\"TestResult\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"No information recorded\",\"default\":\"Falta informacao na livro\"}}},\"_row_num\":17}]"
       },
       {
         "_partition": "Column",
         "_aspect": "C_TRATAMENT1",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":59},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":91}]"
+        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":91},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":92}]"
       },
       {
         "_partition": "Column",
         "_aspect": "C_TRATAMENT2",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":59},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":91}]"
+        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":91},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":92}]"
       },
       {
         "_partition": "Column",
         "_aspect": "C_TRATAMENT3",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":59},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":91}]"
+        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":91},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":92}]"
       },
       {
         "_partition": "Column",
         "_aspect": "C_TRATAMENT4",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":59},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":91}]"
+        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":91},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":92}]"
       },
       {
         "_partition": "Column",
         "_aspect": "C_TRATAMENT5",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":59},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":91}]"
+        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":91},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":92}]"
       },
       {
         "_partition": "Column",
         "_aspect": "C_TRATAMENT6",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":59},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":91}]"
+        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":91},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":92}]"
       },
       {
         "_partition": "Column",
         "_aspect": "C_TRATAMENT7",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":59},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":91}]"
+        "_value": "[{\"choice_list_name\":\"Tratamento\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Paracetamol\",\"default\":\"Paracetamol\"}}},\"_row_num\":60},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Novalgina\",\"default\":\"Novalgina\"}}},\"_row_num\":61},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aspirina\",\"default\":\"Aspirina\"}}},\"_row_num\":62},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Brufen (Ipobrofem)\",\"default\":\"Brufen (Ipobrofem)\"}}},\"_row_num\":63},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Diclofenac /Voltaren\",\"default\":\"Diclofenac /Voltaren\"}}},\"_row_num\":64},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Nolotil\",\"default\":\"Nolotil\"}}},\"_row_num\":65},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Neurobion\",\"default\":\"Neurobion\"}}},\"_row_num\":66},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"8\",\"display\":{\"title\":{\"text\":{\"english\":\"Amoxicillina (Augmentin)\",\"default\":\"Amoxicillina (Augmentin)\"}}},\"_row_num\":67},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Co-trimoxazole (Bactrim)\",\"default\":\"Co-trimoxazole (Bactrim)\"}}},\"_row_num\":68},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"10\",\"display\":{\"title\":{\"text\":{\"english\":\"Metronidazol\",\"default\":\"Metronidazol\"}}},\"_row_num\":69},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"11\",\"display\":{\"title\":{\"text\":{\"english\":\"Mebendazol /Albendazol\",\"default\":\"Mebendazol /Albendazol\"}}},\"_row_num\":70},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"12\",\"display\":{\"title\":{\"text\":{\"english\":\"Ceftriaxon\",\"default\":\"Ceftriaxon\"}}},\"_row_num\":71},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"13\",\"display\":{\"title\":{\"text\":{\"english\":\"Daonil\",\"default\":\"Daonil\"}}},\"_row_num\":72},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"14\",\"display\":{\"title\":{\"text\":{\"english\":\"Metformina\",\"default\":\"Metformina\"}}},\"_row_num\":73},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"15\",\"display\":{\"title\":{\"text\":{\"english\":\"Captopril / Enalapril\",\"default\":\"Captopril / Enalapril\"}}},\"_row_num\":74},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"16\",\"display\":{\"title\":{\"text\":{\"english\":\"Nifedipinina / Amlodipina\",\"default\":\"Nifedipinina / Amlodipina\"}}},\"_row_num\":75},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"17\",\"display\":{\"title\":{\"text\":{\"english\":\"Atenolol\",\"default\":\"Atenolol\"}}},\"_row_num\":76},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"18\",\"display\":{\"title\":{\"text\":{\"english\":\"Furosomida\",\"default\":\"Furosomida\"}}},\"_row_num\":77},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"19\",\"display\":{\"title\":{\"text\":{\"english\":\"Hidrocortisida\",\"default\":\"Hidrocortisida\"}}},\"_row_num\":78},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"20\",\"display\":{\"title\":{\"text\":{\"english\":\"Omeprazole\",\"default\":\"Omeprazole\"}}},\"_row_num\":79},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"21\",\"display\":{\"title\":{\"text\":{\"english\":\"Cimetidina\",\"default\":\"Cimetidina\"}}},\"_row_num\":80},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"22\",\"display\":{\"title\":{\"text\":{\"english\":\"Malox\",\"default\":\"Malox\"}}},\"_row_num\":81},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"23\",\"display\":{\"title\":{\"text\":{\"english\":\"Nystatina\",\"default\":\"Nystatina\"}}},\"_row_num\":82},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"24\",\"display\":{\"title\":{\"text\":{\"english\":\"Pomanda Cetokonazol / Ketokonazol /Clotrimazol /Miconazol\",\"default\":\"Pomanda Clotrimazol/ Cetokonazol / Ketokonazol / Miconazol\"}}},\"_row_num\":83},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"25\",\"display\":{\"title\":{\"text\":{\"english\":\"Multivitamina\",\"default\":\"Multivitamina\"}}},\"_row_num\":84},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"26\",\"display\":{\"title\":{\"text\":{\"english\":\"Coartem\",\"default\":\"Coartem\"}}},\"_row_num\":85},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"27\",\"display\":{\"title\":{\"text\":{\"english\":\"Artesunato\",\"default\":\"Artesunato\"}}},\"_row_num\":86},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"28\",\"display\":{\"title\":{\"text\":{\"english\":\"Quinina/Quinimax\",\"default\":\"Quinina/Quinimax\"}}},\"_row_num\":87},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"29\",\"display\":{\"title\":{\"text\":{\"english\":\"Ciprofloxacin\",\"default\":\"Ciprofloxacina\"}}},\"_row_num\":88},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"30\",\"display\":{\"title\":{\"text\":{\"english\":\"Iron FA\",\"default\":\"Sulfato Feroso\"}}},\"_row_num\":89},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"31\",\"display\":{\"title\":{\"text\":{\"english\":\"Complexo B\",\"default\":\"Complexo B\"}}},\"_row_num\":90},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"77\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":91},{\"choice_list_name\":\"Tratamento\",\"data_value\":\"0\",\"display\":{\"title\":{\"text\":{\"english\":\"Nenhum\",\"default\":\"Nenhum\"}}},\"_row_num\":92}]"
       },
       {
         "_partition": "FormType",
