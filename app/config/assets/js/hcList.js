@@ -80,17 +80,17 @@ function setDisplayText(person) {
     }
     
     var numest;
-    if (person.NUMEST == null) {
+    if (person.C_NUMEST == null) {
         numest = "Não sabe";
     } else {
-        numest = person.NUMEST;
+        numest = person.C_NUMEST;
     }
 
     var nmensal;
-    if (person.NMENSAL == undefined) {
+    if (person.C_NMENSAL == undefined) {
         nmensal = "Não sabe";
     } else {
-        nmensal = person.NMENSAL;
+        nmensal = person.C_NMENSAL;
     }
 
     var displayText = "Data: " + date + "<br />" + 
