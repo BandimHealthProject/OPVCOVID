@@ -736,7 +736,7 @@
             }
           }
         },
-        "constraint": "data(\"CONSTI\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"CONSTI\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
         "_row_num": 7
       },
       {
@@ -868,7 +868,7 @@
             }
           }
         },
-        "constraint": "data(\"TOSSE\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"TOSSE\") != null || data(\"ESTADO\") == null|| data(\"GETRESULTS\")=='1'",
         "_row_num": 19
       },
       {
@@ -1000,7 +1000,7 @@
             }
           }
         },
-        "constraint": "data(\"FEBRE\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"FEBRE\") != null || data(\"ESTADO\") == null|| data(\"GETRESULTS\")=='1'",
         "_row_num": 31
       },
       {
@@ -1138,7 +1138,7 @@
             }
           }
         },
-        "constraint": "data(\"DISPNE\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"DISPNE\") != null || data(\"ESTADO\") == null|| data(\"GETRESULTS\")=='1'",
         "_row_num": 43
       },
       {
@@ -1270,7 +1270,7 @@
             }
           }
         },
-        "constraint": "data(\"VOMITO\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"VOMITO\") != null || data(\"ESTADO\") == null|| data(\"GETRESULTS\")=='1'",
         "_row_num": 55
       },
       {
@@ -1402,7 +1402,7 @@
             }
           }
         },
-        "constraint": "data(\"DIARRE\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"DIARRE\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
         "_row_num": 67
       },
       {
@@ -1540,7 +1540,7 @@
             }
           }
         },
-        "constraint": "data(\"OLFATO\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"OLFATO\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
         "_row_num": 79
       },
       {
@@ -1678,7 +1678,7 @@
             }
           }
         },
-        "constraint": "data(\"PALADA\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"PALADA\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
         "_row_num": 91
       },
       {
@@ -1810,7 +1810,7 @@
             }
           }
         },
-        "constraint": "data(\"CABECA\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"CABECA\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
         "_row_num": 103
       },
       {
@@ -1942,7 +1942,7 @@
             }
           }
         },
-        "constraint": "data(\"GARGAN\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"GARGAN\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
         "_row_num": 115
       },
       {
@@ -2074,7 +2074,7 @@
             }
           }
         },
-        "constraint": "data(\"CORPO\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"CORPO\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
         "_row_num": 127
       },
       {
@@ -2206,7 +2206,7 @@
             }
           }
         },
-        "constraint": "data(\"CONSAC\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"CONSAC\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
         "_row_num": 139
       },
       {
@@ -2338,7 +2338,7 @@
             }
           }
         },
-        "constraint": "data(\"OUSIN1\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"OUSIN1\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
         "_row_num": 151
       },
       {
@@ -2489,7 +2489,7 @@
             }
           }
         },
-        "constraint": "data(\"OUSIN2\") != null ||data(\"OUSIN1\") == '2' || data(\"OUSIN1\") == '3'|| data(\"ESTADO\") == null",
+        "constraint": "data(\"OUSIN2\") != null ||data(\"OUSIN1\") == '2' || data(\"OUSIN1\") == '3'|| data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
         "_row_num": 165
       },
       {
@@ -2639,7 +2639,7 @@
             }
           }
         },
-        "constraint": "data(\"PESO\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"PESO\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
         "_row_num": 179
       },
       {
@@ -2675,7 +2675,7 @@
             }
           }
         },
-        "constraint": "data(\"CONS\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"CONS\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
         "_row_num": 183
       },
       {
@@ -3680,7 +3680,7 @@
             }
           }
         },
-        "constraint": "data(\"HOSP\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"HOSP\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
         "_row_num": 300
       },
       {
@@ -5035,7 +5035,7 @@
             }
           }
         },
-        "constraint": "data(\"MEDICA\") != null || data(\"ESTADO\") == null",
+        "constraint": "data(\"MEDICA\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\") == '1'",
         "_row_num": 457
       },
       {
@@ -5054,7 +5054,7 @@
             }
           }
         },
-        "constraint": "data(\"MEDICAQU\") != null || data(\"ESTADO\") == null || data(\"MEDICA\") == '2'",
+        "constraint": "data(\"MEDICAQU\") != null || data(\"ESTADO\") == null || data(\"MEDICA\") != '1'",
         "_row_num": 459
       },
       {
@@ -12508,7 +12508,7 @@
                 }
               }
             },
-            "constraint": "data(\"CONSTI\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"CONSTI\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
             "_row_num": 7,
             "__rowNum__": 6,
             "_token_type": "prompt",
@@ -12662,7 +12662,7 @@
                 }
               }
             },
-            "constraint": "data(\"TOSSE\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"TOSSE\") != null || data(\"ESTADO\") == null|| data(\"GETRESULTS\")=='1'",
             "_row_num": 19,
             "__rowNum__": 18,
             "_token_type": "prompt",
@@ -12816,7 +12816,7 @@
                 }
               }
             },
-            "constraint": "data(\"FEBRE\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"FEBRE\") != null || data(\"ESTADO\") == null|| data(\"GETRESULTS\")=='1'",
             "_row_num": 31,
             "__rowNum__": 30,
             "_token_type": "prompt",
@@ -12976,7 +12976,7 @@
                 }
               }
             },
-            "constraint": "data(\"DISPNE\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"DISPNE\") != null || data(\"ESTADO\") == null|| data(\"GETRESULTS\")=='1'",
             "_row_num": 43,
             "__rowNum__": 42,
             "_token_type": "prompt",
@@ -13130,7 +13130,7 @@
                 }
               }
             },
-            "constraint": "data(\"VOMITO\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"VOMITO\") != null || data(\"ESTADO\") == null|| data(\"GETRESULTS\")=='1'",
             "_row_num": 55,
             "__rowNum__": 54,
             "_token_type": "prompt",
@@ -13284,7 +13284,7 @@
                 }
               }
             },
-            "constraint": "data(\"DIARRE\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"DIARRE\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
             "_row_num": 67,
             "__rowNum__": 66,
             "_token_type": "prompt",
@@ -13444,7 +13444,7 @@
                 }
               }
             },
-            "constraint": "data(\"OLFATO\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"OLFATO\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
             "_row_num": 79,
             "__rowNum__": 78,
             "_token_type": "prompt",
@@ -13604,7 +13604,7 @@
                 }
               }
             },
-            "constraint": "data(\"PALADA\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"PALADA\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
             "_row_num": 91,
             "__rowNum__": 90,
             "_token_type": "prompt",
@@ -13758,7 +13758,7 @@
                 }
               }
             },
-            "constraint": "data(\"CABECA\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"CABECA\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
             "_row_num": 103,
             "__rowNum__": 102,
             "_token_type": "prompt",
@@ -13912,7 +13912,7 @@
                 }
               }
             },
-            "constraint": "data(\"GARGAN\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"GARGAN\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
             "_row_num": 115,
             "__rowNum__": 114,
             "_token_type": "prompt",
@@ -14066,7 +14066,7 @@
                 }
               }
             },
-            "constraint": "data(\"CORPO\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"CORPO\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
             "_row_num": 127,
             "__rowNum__": 126,
             "_token_type": "prompt",
@@ -14220,7 +14220,7 @@
                 }
               }
             },
-            "constraint": "data(\"CONSAC\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"CONSAC\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
             "_row_num": 139,
             "__rowNum__": 138,
             "_token_type": "prompt",
@@ -14374,7 +14374,7 @@
                 }
               }
             },
-            "constraint": "data(\"OUSIN1\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"OUSIN1\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
             "_row_num": 151,
             "__rowNum__": 150,
             "_token_type": "prompt",
@@ -14547,7 +14547,7 @@
                 }
               }
             },
-            "constraint": "data(\"OUSIN2\") != null ||data(\"OUSIN1\") == '2' || data(\"OUSIN1\") == '3'|| data(\"ESTADO\") == null",
+            "constraint": "data(\"OUSIN2\") != null ||data(\"OUSIN1\") == '2' || data(\"OUSIN1\") == '3'|| data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
             "_row_num": 165,
             "__rowNum__": 164,
             "_token_type": "prompt",
@@ -14720,7 +14720,7 @@
                 }
               }
             },
-            "constraint": "data(\"PESO\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"PESO\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
             "_row_num": 179,
             "__rowNum__": 178,
             "_token_type": "prompt",
@@ -14757,7 +14757,7 @@
                 }
               }
             },
-            "constraint": "data(\"CONS\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"CONS\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
             "_row_num": 183,
             "__rowNum__": 182,
             "_token_type": "prompt",
@@ -15784,7 +15784,7 @@
                 }
               }
             },
-            "constraint": "data(\"HOSP\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"HOSP\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\")=='1'",
             "_row_num": 300,
             "__rowNum__": 299,
             "_token_type": "prompt",
@@ -17176,7 +17176,7 @@
                 }
               }
             },
-            "constraint": "data(\"MEDICA\") != null || data(\"ESTADO\") == null",
+            "constraint": "data(\"MEDICA\") != null || data(\"ESTADO\") == null || data(\"GETRESULTS\") == '1'",
             "_row_num": 457,
             "__rowNum__": 456,
             "_token_type": "prompt",
@@ -17195,7 +17195,7 @@
                 }
               }
             },
-            "constraint": "data(\"MEDICAQU\") != null || data(\"ESTADO\") == null || data(\"MEDICA\") == '2'",
+            "constraint": "data(\"MEDICAQU\") != null || data(\"ESTADO\") == null || data(\"MEDICA\") != '1'",
             "_row_num": 459,
             "__rowNum__": 458,
             "_token_type": "prompt",
