@@ -2709,7 +2709,7 @@
       {
         "branch_label": "Cons1",
         "clause": "if",
-        "condition": "data(\"CONSNUM\") > \"0\"",
+        "condition": "data(\"CONSNUM\") > \"0\" && data(\"CONS\") == \"1\"",
         "_row_num": 188
       },
       {
@@ -2898,7 +2898,7 @@
       {
         "branch_label": "Cons2",
         "clause": "if",
-        "condition": "data(\"CONSNUM\") > \"1\"",
+        "condition": "data(\"CONSNUM\") > \"1\" && data(\"CONS\") == \"1\"",
         "_row_num": 210
       },
       {
@@ -3087,7 +3087,7 @@
       {
         "branch_label": "Cons3",
         "clause": "if",
-        "condition": "data(\"CONSNUM\") > \"2\"",
+        "condition": "data(\"CONSNUM\") > \"2\" && data(\"CONS\") == \"1\"",
         "_row_num": 232
       },
       {
@@ -3276,7 +3276,7 @@
       {
         "branch_label": "Cons4",
         "clause": "if",
-        "condition": "data(\"CONSNUM\") > \"3\"",
+        "condition": "data(\"CONSNUM\") > \"3\" && data(\"CONS\") == \"1\"",
         "_row_num": 254
       },
       {
@@ -3465,7 +3465,7 @@
       {
         "branch_label": "Cons5",
         "clause": "if",
-        "condition": "data(\"CONSNUM\") > \"4\"",
+        "condition": "data(\"CONSNUM\") > \"4\" && data(\"CONS\") == \"1\"",
         "_row_num": 276
       },
       {
@@ -3714,7 +3714,7 @@
       {
         "branch_label": "Hosp1",
         "clause": "if",
-        "condition": "data(\"HOSPNUM\") > \"0\"",
+        "condition": "data(\"HOSPNUM\") > \"0\" && data(\"HOSP\") == \"1\"",
         "_row_num": 305
       },
       {
@@ -3973,7 +3973,7 @@
       {
         "branch_label": "Hosp2",
         "clause": "if",
-        "condition": "data(\"HOSPNUM\") > \"1\"",
+        "condition": "data(\"HOSPNUM\") > \"1\" && data(\"HOSP\") == \"1\"",
         "_row_num": 335
       },
       {
@@ -4232,7 +4232,7 @@
       {
         "branch_label": "Hosp3",
         "clause": "if",
-        "condition": "data(\"HOSPNUM\") > \"2\"",
+        "condition": "data(\"HOSPNUM\") > \"2\" && data(\"HOSP\") == \"1\"",
         "_row_num": 365
       },
       {
@@ -4491,7 +4491,7 @@
       {
         "branch_label": "Hosp4",
         "clause": "if",
-        "condition": "data(\"HOSPNUM\") > \"3\"",
+        "condition": "data(\"HOSPNUM\") > \"3\" && data(\"HOSP\") == \"1\"",
         "_row_num": 395
       },
       {
@@ -4750,7 +4750,7 @@
       {
         "branch_label": "Hosp5",
         "clause": "if",
-        "condition": "data(\"HOSPNUM\") > \"4\"",
+        "condition": "data(\"HOSPNUM\") > \"4\" && data(\"HOSP\") == \"1\"",
         "_row_num": 425
       },
       {
@@ -17862,7 +17862,7 @@
           },
           {
             "clause": "if",
-            "condition": "data(\"CONSNUM\") > \"0\"",
+            "condition": "data(\"CONSNUM\") > \"0\" && data(\"CONS\") == \"1\"",
             "_row_num": 188,
             "__rowNum__": 187,
             "_token_type": "goto_label",
@@ -17913,7 +17913,7 @@
           },
           {
             "clause": "if",
-            "condition": "data(\"CONSNUM\") > \"1\"",
+            "condition": "data(\"CONSNUM\") > \"1\" && data(\"CONS\") == \"1\"",
             "_row_num": 210,
             "__rowNum__": 209,
             "_token_type": "goto_label",
@@ -17964,7 +17964,7 @@
           },
           {
             "clause": "if",
-            "condition": "data(\"CONSNUM\") > \"2\"",
+            "condition": "data(\"CONSNUM\") > \"2\" && data(\"CONS\") == \"1\"",
             "_row_num": 232,
             "__rowNum__": 231,
             "_token_type": "goto_label",
@@ -18015,7 +18015,7 @@
           },
           {
             "clause": "if",
-            "condition": "data(\"CONSNUM\") > \"3\"",
+            "condition": "data(\"CONSNUM\") > \"3\" && data(\"CONS\") == \"1\"",
             "_row_num": 254,
             "__rowNum__": 253,
             "_token_type": "goto_label",
@@ -18066,7 +18066,7 @@
           },
           {
             "clause": "if",
-            "condition": "data(\"CONSNUM\") > \"4\"",
+            "condition": "data(\"CONSNUM\") > \"4\" && data(\"CONS\") == \"1\"",
             "_row_num": 276,
             "__rowNum__": 275,
             "_token_type": "goto_label",
@@ -18131,7 +18131,7 @@
           },
           {
             "clause": "if",
-            "condition": "data(\"HOSPNUM\") > \"0\"",
+            "condition": "data(\"HOSPNUM\") > \"0\" && data(\"HOSP\") == \"1\"",
             "_row_num": 305,
             "__rowNum__": 304,
             "_token_type": "goto_label",
@@ -18196,7 +18196,7 @@
           },
           {
             "clause": "if",
-            "condition": "data(\"HOSPNUM\") > \"1\"",
+            "condition": "data(\"HOSPNUM\") > \"1\" && data(\"HOSP\") == \"1\"",
             "_row_num": 335,
             "__rowNum__": 334,
             "_token_type": "goto_label",
@@ -18261,7 +18261,7 @@
           },
           {
             "clause": "if",
-            "condition": "data(\"HOSPNUM\") > \"2\"",
+            "condition": "data(\"HOSPNUM\") > \"2\" && data(\"HOSP\") == \"1\"",
             "_row_num": 365,
             "__rowNum__": 364,
             "_token_type": "goto_label",
@@ -18326,7 +18326,7 @@
           },
           {
             "clause": "if",
-            "condition": "data(\"HOSPNUM\") > \"3\"",
+            "condition": "data(\"HOSPNUM\") > \"3\" && data(\"HOSP\") == \"1\"",
             "_row_num": 395,
             "__rowNum__": 394,
             "_token_type": "goto_label",
@@ -18391,7 +18391,7 @@
           },
           {
             "clause": "if",
-            "condition": "data(\"HOSPNUM\") > \"4\"",
+            "condition": "data(\"HOSPNUM\") > \"4\" && data(\"HOSP\") == \"1\"",
             "_row_num": 425,
             "__rowNum__": 424,
             "_token_type": "goto_label",
