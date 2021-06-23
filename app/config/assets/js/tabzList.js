@@ -40,7 +40,7 @@ function getTabanca(data) {
 
 function getList() {
     // SQL to get participants
-    var sql = "SELECT _savepoint_type, BAIRRO, CALLBACK, COVID, DATINC, DATSEG, ESTADO, FU, LASTINTERVIEW, POID, TABZ, TESTERESUL " + 
+    var sql = "SELECT _savepoint_type, BAIRRO, CALLBACK, COVID, DATINC, DATSEG, ESTADO, FU, LASTINTERVIEW, NOME, POID, TABZ, TESTERESUL " + 
         " FROM OPVCOVID " +
         " WHERE BAIRRO = " + bairro +
         " GROUP BY POID HAVING MAX(FU)"; 
@@ -60,6 +60,7 @@ function getList() {
             var ESTADO = result.getData(row,"ESTADO");
             var FU = result.getData(row,"FU");
             var LASTINTERVIEW = result.getData(row,"LASTINTERVIEW");
+            var NOME = result.getData(row,"NOME");
             var POID = result.getData(row,"POID");
             var TABZ = result.getData(row,"TABZ");
             var TESTERESUL = result.getData(row,"TESTERESUL");
@@ -95,7 +96,7 @@ function getList() {
             var incY = DATINC.slice(DATINC.search("Y")+2);
             var FUEnd = new Date(incY, incM-1, incD + 183);
 
-            var p = { type: 'person', savepoint, BAIRRO, CALLBACK, COVID, DATINC, DATSEG, ESTADO, FU, FUDate, FUEnd, LastFU, LASTINTERVIEW, POID, TABZ, TESTERESUL};
+            var p = { type: 'person', savepoint, BAIRRO, CALLBACK, COVID, DATINC, DATSEG, ESTADO, FU, FUDate, FUEnd, LastFU, LASTINTERVIEW, NOME, POID, TABZ, TESTERESUL};
             participants.push(p);
         }
         console.log("Participants:", participants)
@@ -136,7 +137,7 @@ function getCount(tabz) {
     var today = new Date(date);
     var todayAdate = "D:" + today.getDate() + ",M:" + (Number(today.getMonth()) + 1) + ",Y:" + today.getFullYear();
 
-    var total = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & (person.FUDate <= today & person.LastFU <= person.FUEnd & ((person.ESTADO != "2" & person.ESTADO != "3") | person.CALLBACK == "1" | person.TESTERESUL == "3") | person.DATSEG == todayAdate)).length;
+    var total = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & (person.FUDate <= today & person.LastFU <= person.FUEnd & ((person.ESTADO != "2" & person.ESTADO != "3" & person.ESTADO != "6") | person.CALLBACK == "1" | person.TESTERESUL == "3") | person.DATSEG == todayAdate)).length;
     var checked = participants.filter(person => person.BAIRRO == bairro & person.TABZ == tabz & person.DATSEG == todayAdate & person.savepoint == "COMPLETE").length;
     var count = "(" + checked + "/" + total + ")";
     return count;
